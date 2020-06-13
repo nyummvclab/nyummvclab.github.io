@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Dance-Net</title>
+    <meta property="og:title" content="Dance-Net"/>
+
+    <link rel="stylesheet" type="text/css" href="../../../style.css">
+</head>
+
+<body>
+
+<!-- Title -->
+<br>
+<center>
+    <span style="font-size:38px">DANCE-NET: DENSITY-AWARE CONVOLUTION NETWORKS WITH CONTEXT
+ENCODING FOR AIRBORNE LIDAR POINT CLOUD CLASSIFICATION</span>
+</center>
+
+<!-- Authors -->
+<br>
+<table align=center width=900px>
+    <tr>
+        <td align=center width=100px>
+            <center>
+                <span style="font-size:20px"><a href="#">Xiang Li</a><sup>1</sup></span>
+            </center>
+        </td>
+        
+        <td align=center width=100px>
+            <center>
+                <span style="font-size:20px"><a href="#">Lingjing Wang</a><sup>1</sup></span>
+            </center>
+        </td>
+        <td align=center width=100px>
+            <center>
+                <span style="font-size:20px"><a href="#">Congcong Wen</a><sup>1</sup></span>
+            </center>
+        </td>
+        <td align=center width=100px>
+            <center>
+                <span style="font-size:20px"><a href="#">Mingyang Wang</a><sup>1</sup></span>
+            </center>
+        </td>
+        <td align=center width=100px>
+            <center>
+                <span style="font-size:20px"><a href="#">Yi Fang</a><sup>1</sup></span>
+            </center>
+        </td>
+    </tr>
+</table>
+
+<!-- Authors (cont.) -->
+<!--<br>-->
+<!--<table align=center width=900px>-->
+<!--    <tr>-->
+<!--        <td align=center width=100px>-->
+<!--            <center>-->
+<!--                <span style="font-size:20px"><a href="#">#</a><sup>1</sup></span>-->
+<!--            </center>-->
+<!--        </td>-->
+<!--        <td align=center width=100px>-->
+<!--            <center>-->
+<!--                <span style="font-size:20px"><a href="#">#</a><sup>1</sup></span>-->
+<!--            </center>-->
+<!--        </td>-->
+<!--        <td align=center width=100px>-->
+<!--            <center>-->
+<!--                <span style="font-size:20px"><a href="#">#</a><sup>1</sup></span>-->
+<!--            </center>-->
+<!--        </td>-->
+<!--        <td align=center width=100px>-->
+<!--            <center>-->
+<!--                <span style="font-size:20px"><a href="#">Sanja Fidler</a><sup>1</sup></span>-->
+<!--            </center>-->
+<!--        </td>-->
+<!--    </tr>-->
+<!--</table>-->
+
+<!-- Organizations -->
+<br>
+<table align=center width=900px>
+    <tr>
+        <td align=center width=100px>
+            <center>
+                <span style="font-size:20px"><sup>1</sup>New York University</span>
+            </center>
+        </td>
+<!--        <td align=center width=100px>-->
+<!--            <center>-->
+<!--                <span style="font-size:20px"><sup>2</sup>#</span>-->
+<!--            </center>-->
+<!--        </td>-->
+<!--        <td align=center width=100px>-->
+<!--            <center>-->
+<!--                <span style="font-size:20px"><sup>3</sup>#</span>-->
+<!--            </center>-->
+<!--        </td>-->
+<!--        <td align=center width=100px>-->
+<!--            <center>-->
+<!--                <span style="font-size:20px"><sup>4</sup>#</span>-->
+<!--            </center>-->
+<!--        </td>-->
+    </tr>
+</table>
+
+<!-- Venus -->
+<!--<table align=center width=700px>-->
+<!--    <tr>-->
+<!--        <td align=center width=100px>-->
+<!--            <center>-->
+<!--                <span style="font-size:20px;color:#ff0000">#<b>(Oral)</b></span>-->
+<!--            </center>-->
+<!--        </td>-->
+<!--    </tr>-->
+<!--</table>-->
+
+<!-- Teaser figure -->
+<br>
+<table align=center width="1024px">
+    <tr>
+        <td width="900px">
+            <center>
+                <img src="./resources/teaser.png" width="1024px"></img>
+            </center>
+        </td>
+    </tr>
+</table>
+
+<!-- Abstract -->
+<table align=center width=900px></table>
+<tr></tr>
+<tr>
+    <td width=600px>
+        <br>
+        <p align="justify" style="font-size: 18px">
+            Airborne LiDAR point cloud classification has been a long-standing problem in photogrammetry and remote sensing. Early efforts either
+combine hand-crafted feature engineering with machine learning-based classification models or leverage the power of conventional
+convolutional neural networks (CNNs) on projected feature images. Recent proposed deep learning-based methods tend to develop new
+convolution operators which can be directly applied on raw point clouds for representative point feature learning. Although these methods
+have achieved satisfying performance for the classification of airborne LiDAR point clouds, they cannot adequately recognize
+fine-grained local structures due to the uneven density distribution of 3D point clouds. In this paper, to address this challenging issue,
+we introduce a density-aware convolution module which uses the point-wise density to reweight the learnable weights of convolution
+kernels. The proposed convolution module can approximate continuous convolution on unevenly distributed 3D point sets. Based on
+this convolution module, we further develop a multi-scale CNN model with downsampling and upsampling blocks to perform perpoint
+semantic labeling. In addition, to regularize the global semantic context, we implement a context encoding module to predict a
+global context encoding and formulated a context encoding regularizer to enforce the predicted context encoding to be aligned with the
+ground truth one. The overall network can be trained in an end-to-end fashion and directly produces the desired classification results
+in one network forward pass. Experiments on the ISPRS 3D Labeling Dataset and 2019 Data Fusion Contest Dataset demonstrate the
+effectiveness and superiority of the proposed method for airborne LiDAR point cloud classification.
+        </p>
+    </td>
+</tr>
+<tr></tr>
+</table>
+
+<!-- News -->
+<br>
+<hr>
+<table align=center width=700>
+    <center><h1>News</h1></center>
+    <tr>
+        <ul>
+            <li>[May 2020] <font color='red'>Publicated at ISPRS Journal of Photogrammetry and Remote Sensing</font></li>
+            <!-- <li>[June 2020] Project page is up.</a></li> -->
+        </ul>
+    </tr>
+</table>
+
+<!-- Video -->
+<!--<br>-->
+<!--<hr>-->
+<!--<table align=center width=800>-->
+<!--    <center><h1>Videos</h1></center>-->
+<!--    <tr>-->
+<!--        <td>-->
+<!--            <center>-->
+<!--                <span style="font-size:28px">Full Demo Video</span>-->
+<!--            </center>-->
+<!--        </td>-->
+<!--    </tr>-->
+
+<!--    <tr>-->
+<!--        <td width=100px>-->
+<!--            <center>-->
+<!--                <video width="800" controls muted>-->
+<!--                    <source src="#" type="video/mp4">   &lt;!&ndash; put video in resource folder &ndash;&gt;-->
+<!--                </video>-->
+<!--            </center>-->
+<!--        </td>-->
+<!--    </tr>-->
+<!--</table>-->
+
+<!-- Paper info -->
+<br>
+<hr>
+<table align=center width=700>
+    <center><h1>Paper</h1></center>
+    <tr>
+        <td>
+            <a href="https://arxiv.org/abs/1910.05909" target="_blank">
+                <img style="height:180px; border: solid; border-radius:30px;" src="./resources/paper.png"/>
+            </a>
+        </td>
+        <td>
+            <span style="font-size:18px">Xiang Li, Lingjing Wang, Congcong Wen, Mingyang Wang, Yi Fang
+                <!-- <br> More authors <br> More authors -->
+                <br><br>
+                DANCE-NET: Density-aware convolution networks with context encoding for airborne LiDAR point cloud classification
+                <br><br>
+     <!--            Preprint, 2020 -->
+                <br>
+            </span>
+        </td>
+    </tr>
+</table>
+
+<!-- Paper links -->
+<br>
+<table align=center width=700px>
+    <tr>
+        <td>
+            <span style="font-size:18px">
+                <center>
+                    <a href="https://arxiv.org/abs/1910.05909">[Paper]</a>
+                </center>
+            </span>
+        </td>
+<!--        <td>-->
+<!--            <span style="font-size:18px">-->
+<!--                <center>-->
+<!--                    <a href="#">[Supplement]</a>-->
+<!--                </center>-->
+<!--            </span>-->
+<!--        </td>-->
+        <td>
+            <span style="font-size:18px">
+                <center>
+                    <a href="./resources/bibtxt.bib">[Bibtex]</a>
+                </center>
+            </span>
+        </td>
+    </tr>
+</table>
+
+<! -- Model -->
+<br>
+<hr>
+<center>
+    <h1>Model</h1>
+</center>
+<table align=center width="1024px">
+    <tr>
+        <center>
+            <img class="round" src="./resources/model.png" width="1024px"/>
+        </center>
+    </tr>
+</table>
+
+<!-- Results -->
+<br>
+<hr>
+<center><h1>Results</h1></center>
+<br>
+<table align=center width="1024px">
+    <tr>
+        <td>
+            <center>
+                <img src="./resources/results1.png" width="1024px"/><br>
+            </center>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <center>
+                <span style="font-size:18px">Classification performance of our model and the top three models on the ISPRS benchmark. We report the per-category F1
+score in the first 9 columns as well as the overall accuracy (OA) and average F1 score (Average F1) in the last two columns. The
+boldface text indicates the best performance.</span>
+            </center>
+        </td>
+    </tr>
+
+    <tr>
+        <td colspan='2'>
+            <center>
+                <img src="./resources/results2.png" width="1024px"/><br>
+            </center>
+        </td>
+    </tr>
+    <tr>
+        <td colspan='2'>
+            <center>
+                <span style="font-size:18px">Qualitative Results on 3D shape registration</span>
+            </center>
+        </td>
+    </tr>
+
+    <tr>
+        <td colspan='2'>
+            <center>
+                <img src="./resources/results3.png" width="1024px"/><br>
+            </center>
+        </td>
+    </tr>
+    <tr>
+        <td colspan='2'>
+            <center>
+                <span style="font-size:18px">Performance of our model and all comparing methods on the 2019 Data Fusion Contest Dataset. We report the F1 score for
+each category in the first 5 columns as well as the overall accuracy (OA) and average F1 score (Average F1) in the last two columns.
+The boldface text indicates the best performance.</span>
+            </center>
+        </td>
+    </tr>
+</table>
+
+<!-- Credit -->
+<hr>
+<br>
+<table style="font-size:14px" align=center>
+    <tr>
+        <td>
+            This webpage template was borrowed from <a href='../../2020/MEPS/'>MEPS</a>.
+        </td>
+    </tr>
+</table>
+
+</body>
+</html>

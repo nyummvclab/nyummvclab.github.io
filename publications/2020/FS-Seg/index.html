@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>FS-Seg</title>
+    <meta property="og:title" content="FS-Seg"/>
+
+    <link rel="stylesheet" type="text/css" href="../../../style.css">
+</head>
+
+<body>
+
+<!-- Title -->
+<br>
+<center>
+    <span style="font-size:38px">Few-shot Learning of Part-specific Probability Space for 3D Shape Segmentation</span>
+</center>
+
+<!-- Authors -->
+<br>
+<table align=center width=900px>
+    <tr>
+        <td align=center width=100px>
+            <center>
+                <span style="font-size:20px"><a href="#">Lingjing Wang</a><sup>1</sup></span>
+            </center>
+        </td>
+
+        <td align=center width=100px>
+            <center>
+                <span style="font-size:20px"><a href="#">Xiang Li</a><sup>1</sup></span>
+            </center>
+        </td>
+        <td align=center width=100px>
+            <center>
+                <span style="font-size:20px"><a href="#">Yi Fang</a><sup>1</sup></span>
+            </center>
+        </td>
+    </tr>
+</table>
+
+<!-- Authors (cont.) -->
+<!--<br>-->
+<!--<table align=center width=900px>-->
+<!--    <tr>-->
+<!--        <td align=center width=100px>-->
+<!--            <center>-->
+<!--                <span style="font-size:20px"><a href="#">#</a><sup>1</sup></span>-->
+<!--            </center>-->
+<!--        </td>-->
+<!--        <td align=center width=100px>-->
+<!--            <center>-->
+<!--                <span style="font-size:20px"><a href="#">#</a><sup>1</sup></span>-->
+<!--            </center>-->
+<!--        </td>-->
+<!--        <td align=center width=100px>-->
+<!--            <center>-->
+<!--                <span style="font-size:20px"><a href="#">#</a><sup>1</sup></span>-->
+<!--            </center>-->
+<!--        </td>-->
+<!--        <td align=center width=100px>-->
+<!--            <center>-->
+<!--                <span style="font-size:20px"><a href="#">Sanja Fidler</a><sup>1</sup></span>-->
+<!--            </center>-->
+<!--        </td>-->
+<!--    </tr>-->
+<!--</table>-->
+
+<!-- Organizations -->
+<br>
+<table align=center width=900px>
+    <tr>
+        <td align=center width=100px>
+            <center>
+                <span style="font-size:20px"><sup>1</sup>New York University</span>
+            </center>
+        </td>
+<!--        <td align=center width=100px>-->
+<!--            <center>-->
+<!--                <span style="font-size:20px"><sup>2</sup>#</span>-->
+<!--            </center>-->
+<!--        </td>-->
+<!--        <td align=center width=100px>-->
+<!--            <center>-->
+<!--                <span style="font-size:20px"><sup>3</sup>#</span>-->
+<!--            </center>-->
+<!--        </td>-->
+<!--        <td align=center width=100px>-->
+<!--            <center>-->
+<!--                <span style="font-size:20px"><sup>4</sup>#</span>-->
+<!--            </center>-->
+<!--        </td>-->
+    </tr>
+</table>
+
+<!-- Venus -->
+<!--<table align=center width=700px>-->
+<!--    <tr>-->
+<!--        <td align=center width=100px>-->
+<!--            <center>-->
+<!--                <span style="font-size:20px;color:#ff0000">#<b>(Oral)</b></span>-->
+<!--            </center>-->
+<!--        </td>-->
+<!--    </tr>-->
+<!--</table>-->
+
+<!-- Teaser figure -->
+<br>
+<table align=center width="1024px">
+    <tr>
+        <td width="900px">
+            <center>
+                <img src="./resources/6454-teaser.gif" width="1024px"></img>
+            </center>
+        </td>
+    </tr>
+</table>
+
+<!-- Abstract -->
+<table align=center width=900px></table>
+<tr></tr>
+<tr>
+    <td width=600px>
+        <br>
+        <p align="justify" style="font-size: 18px">
+            Recently, deep neural networks are introduced as supervised discriminative models for the learning of 3D point
+cloud segmentation. Most previous supervised methods require a large number of training data with human annotation part labels to guide the training process to ensure the
+model’s generalization abilities on test data. In comparison, we propose a novel 3D shape segmentation method
+that requires few labeled data for training. Given an input
+3D shape, the training of our model starts with identifying a similar 3D shape with part annotations from a minipool of shape templates (e.g. 10 shapes). With the selected
+template shape, a novel Coherent Point Transformer is proposed to fully leverage the power of a deep neural network
+to smoothly morph the template shape towards the input
+shape. Then, based on the transformed template shapes
+with part labels, a newly proposed Part-specific Density
+Estimator is developed to learn a continuous part-specific
+probability distribution function on the entire 3D space with
+a batch consistency regularization term. With the learned
+part-specific probability distribution, our model is able to
+predict the part labels of a new input 3D shape in an end-toend manner. We demonstrate that our proposed method can
+achieve remarkable segmentation results on the ShapeNet
+dataset with few shots, compared to previous supervised
+learning approaches.
+        </p>
+    </td>
+</tr>
+<tr></tr>
+</table>
+
+<!-- News -->
+<br>
+<hr>
+<table align=center width=700>
+    <center><h1>News</h1></center>
+    <tr>
+        <ul>
+            <li>[June 2020] <font color='red'>Publicated at CVPR 2020</font></li>
+            <!-- <li>[June 2020] Project page is up.</a></li> -->
+        </ul>
+    </tr>
+</table>
+
+<!-- Video -->
+<!--<br>-->
+<!--<hr>-->
+<!--<table align=center width=800>-->
+<!--    <center><h1>Videos</h1></center>-->
+<!--    <tr>-->
+<!--        <td>-->
+<!--            <center>-->
+<!--                <span style="font-size:28px">Full Demo Video</span>-->
+<!--            </center>-->
+<!--        </td>-->
+<!--    </tr>-->
+
+<!--    <tr>-->
+<!--        <td width=100px>-->
+<!--            <center>-->
+<!--                <video width="800" controls muted>-->
+<!--                    <source src="#" type="video/mp4">   &lt;!&ndash; put video in resource folder &ndash;&gt;-->
+<!--                </video>-->
+<!--            </center>-->
+<!--        </td>-->
+<!--    </tr>-->
+<!--</table>-->
+
+<!-- Paper info -->
+<br>
+<hr>
+<table align=center width=700>
+    <center><h1>Paper</h1></center>
+    <tr>
+        <td>
+            <a href="http://openaccess.thecvf.com/content_CVPR_2020/papers/Wang_Few-Shot_Learning_of_Part-Specific_Probability_Space_for_3D_Shape_Segmentation_CVPR_2020_paper.pdf" target="_blank">
+                <img style="height:180px; border: solid; border-radius:30px;" src="./resources/paper.png"/>
+            </a>
+        </td>
+        <td>
+            <span style="font-size:18px">Lingjing Wang, Xiang Li, Yi Fang
+                <!-- <br> More authors <br> More authors -->
+                <br><br>
+           Few-shot Learning of Part-specific Probability Space for 3D Shape Segmentation
+                <br><br>
+                 CVPR, 2020
+                <br>
+            </span>
+        </td>
+    </tr>
+</table>
+
+<!-- Paper links -->
+<br>
+<table align=center width=700px>
+    <tr>
+        <td>
+            <span style="font-size:18px">
+                <center>
+                    <a href="http://openaccess.thecvf.com/content_CVPR_2020/papers/Wang_Few-Shot_Learning_of_Part-Specific_Probability_Space_for_3D_Shape_Segmentation_CVPR_2020_paper.pdf">[Paper]</a>
+                </center>
+            </span>
+        </td>
+<!--        <td>-->
+<!--            <span style="font-size:18px">-->
+<!--                <center>-->
+<!--                    <a href="#">[Supplement]</a>-->
+<!--                </center>-->
+<!--            </span>-->
+<!--        </td>-->
+        <td>
+            <span style="font-size:18px">
+                <center>
+                    <a href="./resources/bibtex.bib">[Bibtex]</a>
+                </center>
+            </span>
+        </td>
+    </tr>
+</table>
+
+<! -- Model -->
+<br>
+<hr>
+<center>
+    <h1>Model</h1>
+</center>
+<table align=center width="1024px">
+    <tr>
+        <center>
+            <img class="round" src="./resources/nips_main.png" width="1024px"/>
+        </center>
+    </tr>
+    <tr>
+        <center>
+            <img class="round" src="./resources/Unsup_exp1.png" width="1024px"/>
+        </center>
+    </tr>
+</table>
+
+<!-- Results -->
+<br>
+<hr>
+<center><h1>Results</h1></center>
+<br>
+<table align=center width="1024px">
+    <tr>
+        <td>
+            <center>
+                <img src="./resources/ff1.png" width="1024px"/><br>
+            </center>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <center>
+                <span style="font-size:18px"></span>
+            </center>
+        </td>
+    </tr>
+
+    <tr>
+        <td colspan='2'>
+            <center>
+                <img src="./resources/nips_4.png" width="1024px"/><br>
+            </center>
+        </td>
+    </tr>
+    <tr>
+        <td colspan='2'>
+            <center>
+                <span style="font-size:18px"></span>
+            </center>
+        </td>
+    </tr>
+
+    <tr>
+        <td colspan='2'>
+            <center>
+                <img src="./resources/table.png" width="1024px"/><br>
+            </center>
+        </td>
+    </tr>
+    <tr>
+        <td colspan='2'>
+            <center>
+                <span style="font-size:18px"></span>
+            </center>
+        </td>
+    </tr>
+</table>
+
+<!-- Credit -->
+<hr>
+<br>
+<table style="font-size:14px" align=center>
+    <tr>
+        <td>
+            This webpage template was borrowed from <a href='../../2020/MEPS/'>MEPS</a>.
+        </td>
+    </tr>
+</table>
+
+</body>
+</html>

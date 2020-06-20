@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Siamese</title>
+    <meta property="og:title" content="Siamese"/>
+
+    <link rel="stylesheet" type="text/css" href="../../../style.css">
+</head>
+
+<body>
+
+<!-- Title -->
+<br>
+<center>
+    <span style="font-size:38px">Siamese CNN-BiLSTM Architecture for 3D Shape Representation Learning</span>
+</center>
+
+<!-- Authors -->
+<br>
+<table align=center width=900px>
+    <tr>
+        <td align=center width=100px>
+            <center>
+                <span style="font-size:20px"><a href="#">Guoxian Dai</a><sup>1</sup></span>
+            </center>
+        </td>
+        <td align=center width=100px>
+            <center>
+                <span style="font-size:20px"><a href="#">Jin Xie</a><sup>1</sup></span>
+            </center>
+        </td>
+        <td align=center width=100px>
+            <center>
+                <span style="font-size:20px"><a href="#">Yi Fang</a><sup>1</sup></span>
+            </center>
+        </td>
+    </tr>
+</table>
+
+<!-- Authors (cont.) -->
+<!--<br>-->
+<!--<table align=center width=900px>-->
+<!--    <tr>-->
+<!--        <td align=center width=100px>-->
+<!--            <center>-->
+<!--                <span style="font-size:20px"><a href="#">#</a><sup>1</sup></span>-->
+<!--            </center>-->
+<!--        </td>-->
+<!--        <td align=center width=100px>-->
+<!--            <center>-->
+<!--                <span style="font-size:20px"><a href="#">#</a><sup>1</sup></span>-->
+<!--            </center>-->
+<!--        </td>-->
+<!--        <td align=center width=100px>-->
+<!--            <center>-->
+<!--                <span style="font-size:20px"><a href="#">#</a><sup>1</sup></span>-->
+<!--            </center>-->
+<!--        </td>-->
+<!--        <td align=center width=100px>-->
+<!--            <center>-->
+<!--                <span style="font-size:20px"><a href="#">Sanja Fidler</a><sup>1</sup></span>-->
+<!--            </center>-->
+<!--        </td>-->
+<!--    </tr>-->
+<!--</table>-->
+
+<!-- Organizations -->
+<br>
+<table align=center width=900px>
+    <tr>
+        <td align=center width=100px>
+            <center>
+                <span style="font-size:20px"><sup>1</sup>New York University</span>
+            </center>
+        </td>
+<!--        <td align=center width=100px>-->
+<!--            <center>-->
+<!--                <span style="font-size:20px"><sup>2</sup>#</span>-->
+<!--            </center>-->
+<!--        </td>-->
+<!--        <td align=center width=100px>-->
+<!--            <center>-->
+<!--                <span style="font-size:20px"><sup>3</sup>#</span>-->
+<!--            </center>-->
+<!--        </td>-->
+<!--        <td align=center width=100px>-->
+<!--            <center>-->
+<!--                <span style="font-size:20px"><sup>4</sup>#</span>-->
+<!--            </center>-->
+<!--        </td>-->
+    </tr>
+</table>
+
+<!-- Venus -->
+<!--<table align=center width=700px>-->
+<!--    <tr>-->
+<!--        <td align=center width=100px>-->
+<!--            <center>-->
+<!--                <span style="font-size:20px;color:#ff0000">#<b>(Oral)</b></span>-->
+<!--            </center>-->
+<!--        </td>-->
+<!--    </tr>-->
+<!--</table>-->
+
+<!-- Teaser figure -->
+<br>
+<table align=center width="1024px">
+    <tr>
+        <td width="900px">
+            <center>
+                <img src="./resources/teaser.png" width="1024px">
+            </center>
+        </td>
+    </tr>
+</table>
+
+<!-- Abstract -->
+<table align=center width=900px></table>
+<tr></tr>
+<tr>
+    <td width=600px>
+        <br>
+        <p align="justify" style="font-size: 18px">
+            Learning a 3D shape representation from a collection of its rendered 2D images has been extensively
+studied. However, existing view-based techniques
+have not yet fully exploited the information among
+all the views of projections. In this paper, by employing recurrent neural network to efficiently capture features across different views, we propose a
+siamese CNN-BiLSTM network for 3D shape representation learning. The proposed method minimizes a discriminative loss function to learn a deep
+nonlinear transformation, mapping 3D shapes from
+the original space into a nonlinear feature space. In
+the transformed space, the distance of 3D shapes
+with the same label is minimized, otherwise the
+distance is maximized to a large margin. Specifically, the 3D shapes are first projected into a group
+of 2D images from different views. Then convolutional neural network (CNN) is adopted to extract
+features from different view images, followed by
+a bidirectional long short-term memory (LSTM) to
+aggregate information across different views. Finally, we construct the whole CNN-BiLSTM network into a siamese structure with contrastive loss
+function. Our proposed method is evaluated on
+two benchmarks, ModelNet40 and SHREC 2014,
+demonstrating superiority over the state-of-the-art
+methods.
+        </p>
+    </td>
+</tr>
+<tr></tr>
+</table>
+
+<!-- News -->
+<br>
+<hr>
+<table align=center width=700>
+    <center><h1>News</h1></center>
+    <tr>
+        <ul>
+            <li>[Nov. 2016] <font color='red'>Publicated at the Twenty-Seventh International Joint Conference on Artificial Intelligence</font></li>
+            <!-- <li>[June 2020] Project page is up.</a></li> -->
+        </ul>
+    </tr>
+</table>
+
+<!-- Video -->
+<!--<br>-->
+<!--<hr>-->
+<!--<table align=center width=800>-->
+<!--    <center><h1>Videos</h1></center>-->
+<!--    <tr>-->
+<!--        <td>-->
+<!--            <center>-->
+<!--                <span style="font-size:28px">Full Demo Video</span>-->
+<!--            </center>-->
+<!--        </td>-->
+<!--    </tr>-->
+
+<!--    <tr>-->
+<!--        <td width=100px>-->
+<!--            <center>-->
+<!--                <video width="800" controls muted>-->
+<!--                    <source src="#" type="video/mp4">   &lt;!&ndash; put video in resource folder &ndash;&gt;-->
+<!--                </video>-->
+<!--            </center>-->
+<!--        </td>-->
+<!--    </tr>-->
+<!--</table>-->
+
+<!-- Paper info -->
+<br>
+<hr>
+<table align=center width=700>
+    <center><h1>Paper</h1></center>
+    <tr>
+        <td>
+            <a href="https://pdfs.semanticscholar.org/2b2e/b0594b181099a349ff63c63936466b3419dd.pdf" target="_blank">
+                <img style="height:180px; border: solid; border-radius:30px;" src="./resources/paper.png"/>
+            </a>
+        </td>
+        <td>
+            <span style="font-size:18px">Guoxian Dai, Jin Xie, Yi Fang
+                <!-- <br> More authors <br> More authors -->
+                <br><br>
+                Siamese CNN-BiLSTM Architecture for 3D Shape Representation Learning
+                <br><br>
+                 IJCAI, 2018
+                <br>
+            </span>
+        </td>
+    </tr>
+</table>
+
+<!-- Paper links -->
+<br>
+<table align=center width=700px>
+    <tr>
+        <td>
+            <span style="font-size:18px">
+                <center>
+                    <a href="https://pdfs.semanticscholar.org/2b2e/b0594b181099a349ff63c63936466b3419dd.pdf">[Paper]</a>
+                </center>
+            </span>
+        </td>
+<!--        <td>-->
+<!--            <span style="font-size:18px">-->
+<!--                <center>-->
+<!--                    <a href="#">[Supplement]</a>-->
+<!--                </center>-->
+<!--            </span>-->
+<!--        </td>-->
+        <td>
+            <span style="font-size:18px">
+                <center>
+                    <a href="./resources/bibtex.bib">[Bibtex]</a>
+                </center>
+            </span>
+        </td>
+    </tr>
+</table>
+
+<! -- Model -->
+<br>
+<hr>
+<center>
+    <h1>TC-Net Model</h1>
+</center>
+<table align=center width="1024px">
+    <tr>
+        <center>
+            <img class="round" src="./resources/model.png" width="1024px"/>
+        </center>
+    </tr>
+</table>
+
+<!-- Results -->
+<br>
+<hr>
+<center><h1>Results</h1></center>
+<br>
+<table align=center width="1024px">
+    <tr>
+        <td>
+            <center>
+                <img src="./resources/result1.png" width="1024px"/><br>
+            </center>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <center>
+                <span style="font-size:18px"></span>
+            </center>
+        </td>
+    </tr>
+
+    <tr>
+        <td colspan='2'>
+            <center>
+                <img src="./resources/result2.png" width="1024px"/><br>
+            </center>
+        </td>
+    </tr>
+    <tr>
+        <td colspan='2'>
+            <center>
+                <span style="font-size:18px"></span>
+            </center>
+        </td>
+    </tr>
+
+    <tr>
+        <td colspan='2'>
+            <center>
+                <img src="./resources/result3.png" width="1024px"/><br>
+            </center>
+        </td>
+    </tr>
+    <tr>
+        <td colspan='2'>
+            <center>
+                <span style="font-size:18px"></span>
+            </center>
+        </td>
+    </tr>
+</table>
+
+<!-- Credit -->
+<hr>
+<br>
+<table style="font-size:14px" align=center>
+    <tr>
+        <td>
+            This webpage template was borrowed from <a href='../../2020/MEPS'>MEPS</a>.
+        </td>
+    </tr>
+</table>
+
+</body>
+</html>

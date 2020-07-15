@@ -1,0 +1,651 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta name="generator" content="pandoc">
+    <title>ENGR-AD 113: Digital   Logic - Fall 2017</title>
+    <script src="../../courses/jquery-1.js"></script>
+    <link rel="stylesheet" href="../../courses/bootstrap.css">
+    <link rel="stylesheet" href="../../courses/bootstrap-theme.css">
+    <script src="../../courses/bootstrap.js"></script>
+    <style>
+        /* http://stackoverflow.com/questions/18325779/bootstrap-3-collapse-show-state-with-chevron-icon */
+        .panel-heading .accordion-toggle:before {
+            font-family: 'Glyphicons Halflings';
+            content: "\e114";
+            float: left;
+            color: grey;
+            padding-right: 6px;
+        }
+        .panel-heading .accordion-toggle.collapsed:before {
+            content: "\e080";
+        }
+
+        .mytext {
+            border-style:solid;
+            border-width:1.5px;
+            margin-left:0px;
+            display: inline-block;
+            float:none;
+            text-align:right;
+            right:0px;
+            padding:1px 6px 1px 6px;
+            position:relative;
+            margin-top:-4px;
+            cursor: pointer;
+            color:#000000;
+            border-radius: 5px;
+            background:#DDDDFF;
+            font-size:13px;
+        }
+
+    </style>
+
+    <style type="text/css">
+        ul.book li {
+            list-style-image:url(../../courses/book_small.png);
+            list-style-position: outside;
+            margin-bottom: 2px;
+            font-size: 16px;
+        }
+        ul.code li {
+            list-style-image:url(../../courses/code_small.png);
+            list-style-position: outside;
+            font-size: 16px;
+        }
+        ul.industry li {
+            list-style-image:url(../../courses/industry_small.png);
+            list-style-position: outside;
+            font-size: 16px;
+        }
+        ul.tutorial li {
+            list-style-image:url(../../courses/tutorial_small.png);
+            list-style-position: outside;
+            font-size: 16px;
+        }
+        ul.dataset li {
+            list-style-image:url(../../courses/dataset_small.png);
+            list-style-position: outside;
+            font-size: 16px;
+        }
+        ul.demo li {
+            list-style-image:url(../../courses/demo1_small.png);
+            list-style-position: outside;
+            font-size: 16px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-11803764-2', 'uchicago.edu');
+    ga('require', 'displayfeatures');
+    ga('send', 'pageview');
+
+</script>
+
+<nav class="navbar navbar-default navbar-static-top" role="navigation">
+    <div class="container">
+        <ul class="nav navbar-nav">
+            <li><a href="#introduction">Overview</a></li>
+            <li><a href="#information">Course Information</a></li>
+<!--            <li><a href="#textbook">Textbook</a></li>-->
+            <li><a href="#requirements">Grading</a></li>
+            <li><a href="#syllabus">Syllabus</a></li>
+            <li><a href="#schedule">Schedule</a></li>
+<!--            <li><a href="#feedback">Leave Feedback</a></li>-->
+            <li><a href="#hall">Projects</a></li>
+            <li><a href="#resources">Resources</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container">
+    <a name="introduction"></a>
+    <div class="page-header"><h1 id="course-imtext">ENGR-AD 113: Digital Logic - Fall 2017</h1><font size="5px">Undergraduate Course, Abu Dhabi Campus</font><br/><h3 id="course-CSC420-year">Fall 2017</h3></div>
+    <div class="row">
+        <div style="max-width:100%;">
+            <img src="../../courses/csc420_15.jpg">
+        </div>
+        </br></br>
+        <div class="col-md-13">
+        <span href="#" class="thumbnail">
+              <p><font size="3">TBD</font></p>
+        </span>
+        </div>
+    </div>
+
+    <a name="overview"></a>
+    <div class="page-header"><h2 id="overview">Course Overview</h2></div>
+    <div class="well row">
+        <p>
+            This	module	provides	a	rigorous	introduction	 to	 topics	in	digital
+            logic design	 mostly	 focusing	 on	 combinational	 circuits	 but	 also	 touching	 upon	 basic
+            concepts	 in sequential	 circuits.	 Introductory	 topics	 include:	 classification	 of	 digital
+            systems,	 number systems	 and	 binary	 arithmetic,	 error	 detection	 and	 correction,	 and
+            switching	 algebra. Combinational	 design	 analysis	 and	 synthesis	 topics	 include:	 logic
+            function	optimization, arithmetic	units	such	as	adders	and	subtractors,	and	control	units
+            such	as	decoders	and multiplexers.	A	brief	overview	of	sequential	circuits by	introducing
+            basic	memory	elements	such as	flip-flops,	and	state	diagrams	concludes	the	module.
+        </p>
+        <div class="media">
+            <p style="margin:-8px 0px 0px 0px;"></p>
+            <h4>Intended Learning Outcomes:</h4>
+            <br>
+            <p style="margin:-15px 0px 0px 0px;"></p>
+            <ul>
+                <li>Identify,	formulate	and	solve	circuit	problems (assessed	by	quizzes,	exams,	and
+                    laboratory	projects).</li>
+                <li>Analyze	 a	 given	 logic	 circuit	 to	 identify	 its	 functionality	 and	 quantify	 its	 area,
+                    performance,	 etc. costs by	 applying	 mathematical	 and	 engineering	 knowledge
+                    (assessed	by	quizzes,	exams,	and	laboratory	projects).</li>
+                <li>Transform	a	given	design	specification	sheet	into	an	optimized	logic	design that
+                    meets	 desired	 speed	 and	 cost	 constraints (assessed	 by	 quizzes	 and	 laboratory
+                    projects).</li>
+                <li>Demonstrate	 skill	in	using	 simple	 software	 (CAD)	 tools	 to	design,	 simulate	and
+                    verify	a	logic	circuit (assessed	by	laboratory	projects).</li>
+                <li>Judiciously	apply	well-known	 design	principles	 such	as	hierarchical	 design	and
+                    iterative	design	 techniques to	 further	reduce	design	costs	(assessed	by	quizzes,
+                    exams,	and	laboratory	projects).</li>
+            </ul>
+            <br>
+            <p style="margin:-20px 0px 0px 0px;"></p>
+        </div>
+
+<!--        <p>-->
+<!--            <b>Prerequisites:</b>#-->
+<!--        </p>-->
+
+    </div>
+    <p><a href="#"><span class="glyphicon glyphicon-arrow-up"></span>back to top</a></p>
+
+    <a name="information"></a>
+    <div class="page-header"><h2 id="citation">Course Information</h2></div>
+    <ul class="list-group">
+        <li class="list-group-item">
+            <div class="media">
+                <div class="col-md-4">
+                    <h3>Time and Location</h3>
+                    <h4>Fall 2017</h4>
+                    <b>Day</b>: &nbsp&nbsp&nbsp&nbsp&nbspM-W</br>
+                    <b>Time</b>: &nbsp&nbsp&nbsp11:50am-1:05pm</br>
+                    <b>Room</b>: &nbspTBD</br>
+<!--                    <b>Tutorials</b>: TBD</br>-->
+                </div>
+                <div class="col-md-4">
+                    <h3>Instructor</h3>
+                    <h4>Yi Fang</h4>
+                    <b>Email</b>: &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbspyfang@nyu.edu</br>
+                    <b>Homepage</b>: &nbsp &nbsp<a href="http://mmvc.engineering.nyu.edu" target="_blank">http://mmvc.engineering.nyu.edu</a></br>
+                    <b>Office</b>: &nbsp &nbsp &nbsp &nbsp &nbsp &nbspC1 Office: 156<br/>
+<!--                    <b>Phone</b>: &nbsp056-3190302-->
+                </div>
+                <div class="col-md-4">
+                    <h3>Lab Instructor</h3>
+                    <h4>Muhammad	Sheikh	(faraz.afzal@nyu.edu)</h4>
+                </div>
+            </div>
+        </li>
+    </ul>
+
+    <h3>Information Sheet</h3>
+    <p>The information sheet for the class is available <a href="materials/ENGR-AD-113-Digital-Logic.pdf">here</a>. </p>
+
+    <h3>Software	for	Lab</h3>
+    <p>Logicworks 5 Interactive Software by Capilano Computing (CD comes
+        with the textbook and can be used to install the software on personal computers/laptops); ISE
+        Xilinx FPGA suite</p>
+
+    <br/>
+<!--    <p style="margin:-15px 0px 0px 0px;"></p>-->
+
+<!--    <ul class="list-group">-->
+<!--        <li class="list-group-item">-->
+<!--            <div class="media">-->
+<!--                <p style="margin:-8px 0px 0px 0px;"></p>-->
+<!--                <h4>Useful tutorials:</h4>-->
+<!--                <br/>-->
+<!--                <p style="margin:-15px 0px 0px 0px;"></p>-->
+<!--                <ul>-->
+<!--                    <li><b>Matlab</b> <a href="#">tutorial</a> written by Prof. <a href="#">TBD</a></li>-->
+<!--                    <li><b>Python</b> <a href="#">tutorial</a> written especially for this class by <a href="#">TBD</a></li>-->
+<!--                </ul>-->
+<!--                <br/>-->
+<!--                <p style="margin:-20px 0px 0px 0px;"></p>-->
+<!--            </div>-->
+<!--        </li>-->
+<!--    </ul>-->
+<!--    <br/>-->
+<!--    <p style="margin:-25px 0px 0px 0px;"></p>-->
+
+<!--    <h3>Forum</h3>-->
+<!--    <p>This class uses <a href="#">piazza</a>. On this webpage, we will post <b>announcements</b> and <b>assignments</b>. The students will also be able to post <b>questions</b> and  <b>discussions</b> in a forum style manner, either to their instructors or to their peers.</p>-->
+<!--    <p><font size="4"><b>Please sign up<a href="#">here</a> in the beginning of class.</b></font></p>-->
+
+    <p><a href="#"><span class="glyphicon glyphicon-arrow-up"></span> back to top</a></p>
+
+    <a name="textbook"></a>
+    <div class="page-header"><h2 id="textbook">Textbook</h2></div>
+    <p>We will not directly follow any textbook, however, we will require some reading in the textbook below. Additional readings and material will be posted in the <a href="#schedule">schedule</a> table as well as the <a href="#resources">resources</a> section. </p>
+    <ul class="list-group">
+        <li class="list-group-item">
+            <div class="media">
+                <a class="pull-left text-center" href="https://www.amazon.com/Digital-Design-Introduction-Verilog-Ciletti/dp/B00DT69WRE" target="_blank"><h2><img height=5 src="materials/DigitalFrontCover.jpg" width="110"></h2>Website</a>
+                <a class="pull-left text-center" href=""><h2></h2>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
+                <div class="media-body">
+                    <h3>"Digital Design"</h3>
+                    <h4><a href="#" target="_blank"> M.	 Morris	 Mano </a>and<a href="#" target="_blank"> Michael	 D.	 Ciletti </a></h4>
+                    <h4>Prentice Hall, 5 edition (2006)</h4><br/>
+                    <p>The textbook is freely available online and provides a great resource for introduction to digital design.
+                    <p>We will be reading chapter 1-6 of the fifth <a href="#">version</a>.<p>
+                </div>
+            </div>
+        </li>
+    </ul>
+    <p><a href="#"><span class="glyphicon glyphicon-arrow-up"></span> back to top</a></p>
+
+
+
+    <a name="requirements"></a>
+    <div class="page-header"><h2 id="requirements">Grading</h2></div>
+<!--    <p> Each student is expected to complete four assignments which will be in the form of problem sets and programming-->
+<!--        problems, and complete a project. </p>-->
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a class="requirements-toggle collapsed" data-toggle="collapse" data-parent="#requirements" href="#requirements-list">Teaching and Learning Methodologies</a>
+            </h4>
+        </div>
+        <div class="panel-body">
+            Lecture	 is	 the	 primary	 mode	 of	 delivery.
+            PowerPoint slides	will	be	provided	to	the	students	prior	to	the	lectures.	Students will	be
+            provided	with homework	problems	that	will	not	be	graded;	Homework	will	be	assigned
+            at	the	end	of	each	lecture	session.	Selected	problems	from	these	homework	sets	will be
+            asked	in	announced	quizzes.	These	quizzes	will	be	graded	quickly	and	provided back	to
+            the students	 to	enable	 them	 to	learn	 from	 their	mistakes.	Lab	sessions	will	be	used	 to
+            perform	a demo	(earlier	in	the	semester)	for	the	students,	or	to	describe	the	lab	project.
+            Some	projects	are meant	to	be	completed	within	the	lab	session,	and	some	are	take-home
+            and	to	be	completed	by the	next	lab	session.	Every	lab	project	requires	a	lab	report.	Some
+            projects	 require	 a	 demo	in addition.	 Recitation	 sessions	 are	 dedicated	 for	 reinforcing
+            course	topics	via	solving representative	problem	sets	and	holding	class	discussions.
+<!--            &lt;!&ndash;            <h3>Assignments</h3>&ndash;&gt;-->
+
+<!--&lt;!&ndash;            <p>Assignments will be given <b>every two weeks</b>. They will consist of problem sets and programming problems with the goal of&ndash;&gt;-->
+<!--&lt;!&ndash;                deepening your understanding of the material covered in class. All solutions and programming should be done <b>individually</b>. There will be four&ndash;&gt;-->
+<!--&lt;!&ndash;                assignments altogether, each worth 15% of the final grade.</p>&ndash;&gt;-->
+
+<!--&lt;!&ndash;            <p><b> Deadline:</b> The solutions to the assignments should be submitted by 11.59pm on the date they are due.&ndash;&gt;-->
+<!--&lt;!&ndash;                Anything from 1 minute late to 24 hours will count as one late day.</p>&ndash;&gt;-->
+
+<!--&lt;!&ndash;            <p><b> Lateness policy:</b> Each student will be given a total of 3 free late days. This means that you can hand in three of your assignments one day late,&ndash;&gt;-->
+<!--&lt;!&ndash;                or one assignment three days late. It is up to you to make a good planning of your work. After you have used your 3 day budget, your late assignments will not be accepted.&ndash;&gt;-->
+
+<!--&lt;!&ndash;            <p><b>Plagiarism:</b> We take plagiarism very seriously. Everything you hand in to be marked, namely assignments and projects, must represent your own work. Read <a href="http://www.writing.utoronto.ca/advice/using-sources/how-not-to-plagiarize">How not to plagiarize</a>.&ndash;&gt;-->
+
+<!--&lt;!&ndash;            <h3>Project</h3>&ndash;&gt;-->
+
+<!--&lt;!&ndash;            <p>Each student will be given a topic for the project. You will be able to choose from a list of projects, or propose your&ndash;&gt;-->
+<!--&lt;!&ndash;                own project which will need to be discussed and approved by your instructor. You will need to hand in a report and give a presentation.&ndash;&gt;-->
+<!--&lt;!&ndash;                During the presentation the instructor will ask questions about class material as well as individual assignments. The grade will heavily depend on how well the material is defended and how well the class material is understood by the student.</p>&ndash;&gt;-->
+
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a class="grading-toggle collapsed" data-toggle="collapse" data-parent="#requirements" href="#grading-list">Grading</a>
+            </h4>
+        </div>
+        <div class="panel-body">
+            <b>Students	will	be	graded	as	follows:</b><br/><br/>
+            <table class="table table-condensed">
+                <tr><td><code>Four announced	quizzes	each	with	a	question	or	two selected	from	the
+                    homework problems</code></td><td>20%</td>
+                </tr><tr><td><code>Three	lab	projects,	described	in	a	lab	session,	individually	completed
+                at	home	and	due	by	next	lab</code></td><td>20%</td>
+                </tr><tr><td><code>Midterm	exam (written	exam,	closed	notes	and book)</code></td><td>25%</td>
+                </tr><tr><td><code>Final	exam	(comprehensive,	written	exam,	closed	notes	and	book)</code></td><td>35%</td>
+            </tr></table>
+            <br/>
+            <p style="margin:-45px 0px 0px 0px;"></p>
+        </div>
+    </div>
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a class="requirements-toggle collapsed" data-toggle="collapse" data-parent="#requirements" href="#requirements-list">Related	Laboratory	Exercises</a>
+            </h4>
+        </div>
+        <div class="panel-body">
+            Laboratory	projects on	logic	design,	analysis	and	simple
+            simulations (with	 the	 LogicWorks tool)	 will	 be	 described	 in	 lab	 sessions,	 and	 will	 be
+            completed	by	students	during	the	lab	periods only	for	the	first	lab	project.	The	remaining
+            two	projects	will	be	described	in	a	lab	session,	and	completed	by	the	students	as	a	take
+            home	assignment	by	the	next	lab	session	(within	two	weeks). Reports	and	design	 files
+            must	be	submitted	electronically	for	all	projects through	NewClasses,	which	will	be	the
+            basis	for	evaluation.
+        </div>
+    </div>
+
+
+    <p><a href="#"><span class="glyphicon glyphicon-arrow-up"></span> back to top</a></p>
+
+    <a name="syllabus"></a>
+    <div class="page-header"><h2 id="syllabus">Syllabus</h2></div>
+    <p>The topics	are	subject	to	change.</p>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a class="syllabus-toggle collapsed" data-toggle="collapse" data-parent="#syllabus" href="#syllabus-list">Tentative Syllabus &nbsp&nbsp&nbsp<i>(click to Expand / Collapse)</i></a>
+            </h4>
+        </div>
+        <div id="syllabus-list" class="panel-collapse collapse out">
+            <div class="panel-body">
+                <table class="table table-condensed">
+                    <tbody>
+                    <tr>
+                        <th>Introduction to Digital Logic Design</th>
+                    </tr>
+                    <tr>
+                        <td><code>Digital computer systems overview</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>Information representation</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>Number systems and base conversions</code></td>
+                    </tr>
+
+                    <tr>
+                        <th>Coding Theory Fundamentals</th>
+                    </tr>
+                    <tr>
+                        <td><code>Code-words and distance concept</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>Error detection and correctioncode></td>
+                    </tr>
+                    <tr>
+                        <td><code>Parity, Gray, BCD and Hamming codes</code></td>
+                    </tr>
+
+                    <tr>
+                        <th>Arithmetic Operations (Quiz)</th>
+                    </tr>
+                    <tr>
+                        <td><code>Single/multiple bit addition/subtraction</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>One’s and two’s complement representations</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>Binary multiplication</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>BCD addition/subtraction</code></td>
+                    </tr>
+
+                    <tr>
+                        <th>Intro to Combinational Logic – Part I</th>
+                    </tr>
+                    <tr>
+                        <td><code>Binary logic and gates</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>Boolean algebra</code></td>
+                    </tr>
+
+                    <tr>
+                        <th> Intro to Combinational Logic – Part II (Quiz)</th>
+                    </tr>
+                    <tr>
+                        <td><code>Boolean algebra – continued</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>Canonical forms</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>Minterms and maxterms</code></td>
+                    </tr>
+
+                    <tr>
+                        <th>Intro to Combinational Logic – Part III</th>
+                    </tr>
+                    <tr>
+                        <td><code>Sum of minterms & product of maxterms</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>Complement of functions</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>Conversions between representations</code></td>
+                    </tr>
+
+                    <tr>
+                        <th>Logic Function Minimization – Part I (Quiz)</th>
+                    </tr>
+                    <tr>
+                        <td><code>Cost metrics</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>Karnaugh-maps</code></td>
+                    </tr>
+
+                    <tr>
+                        <th>Logic Function Minimization – Part II</th>
+                    </tr>
+                    <tr>
+                        <td><code>(Prime) implicants/implicates</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>Don’t care bits</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>Systematic optimization</code></td>
+                    </tr>
+
+                    <tr>
+                        <th>Complex Gates (Quiz)</th>
+                    </tr>
+                    <tr>
+                        <td><code>NAND/NOR gates</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>Universal gate concept</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>XOR/XNOR gates</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>More complex gates</code></td>
+                    </tr>
+
+                    <tr>
+                        <th>Combinational Logic Design</th>
+                    </tr>
+                    <tr>
+                        <td><code>Design procedure and example</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>Technology mapping and verification</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>Homework 4 Assigned</code></td>
+                    </tr>
+
+                    <tr>
+                        <th>Arithmetic Circuit Design – Part I (Quiz)</th>
+                    </tr>
+                    <tr>
+                        <td><code>Half/full adder</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>Ripple carry adder design</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>Carry look-ahead adder design</code></td>
+                    </tr>
+
+                    <tr>
+                        <th>Arithmetic Circuit Design – Part II</th>
+                    </tr>
+                    <tr>
+                        <td><code>Subtractor design</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>Adder-subtractor design</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>Design by contraction</code></td>
+                    </tr>
+
+                    <tr>
+                        <th>Advanced topics (Quiz)</th>
+                    </tr>
+                    <tr>
+                        <td><code>Commonly used combinational blocks: Decoders, encoders, multiplexers</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>Introductory view of sequential circuits</code></td>
+                    </tr>
+                    </tbody>
+                </table>
+<!--                <a data-toggle="collapse" data-parent="#syllabus" href="#class-list">close Tentative Schedule</a>-->
+            </div>
+        </div>
+    </div>
+    <p><a href="#"><span class="glyphicon glyphicon-arrow-up"></span> back to top</a></p>
+
+
+    <a name="schedule"></a>
+    <div class="page-header"><h2 id="schedule">Schedule</h2></div>
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a class="schedule-toggle collapsed" data-toggle="collapse" data-parent="#schedule" href="#schedule-list">Schedule</a>
+            </h4>
+        </div>
+        <div class="panel-body">
+            <table class="table table-condensed">
+                <tbody>
+                <tr>
+                    <th>Week</th> <th>Lecture Topic</th> <th>Slides</th> <th>Quiz</th> <th>Exam schedule</th>
+                </tr>
+                <tr>
+                    <td width=100 valign=top>1</td> <td>Introduction to Digital Logic Design</td> <td><a href="materials/Component_1%20Numbers%20Arithmetic%20Coding_3L_-1.ppt">Component_1.ppt</a></td> <td></td> <td width=200></td>
+                </tr>
+<!--                <tr>-->
+<!--                    <td colspan="5" style="text-align:center;" bgcolor="#9DE6FF"></td>-->
+<!--                </tr>-->
+                <tr>
+                    <td width=100 valign=top>1</td> <td>Coding Theory Fundamentals</td> <td><a href="materials/Component_1%20Numbers%20Arithmetic%20Coding_3L_-1.ppt">Component_1.ppt</a></td> <td></td> <td width=200></td>
+                </tr>
+                <tr>
+                    <td width=100 valign=top>2</td> <td>Arithmetic Operations</td> <td><a href="materials/Component_1%20Numbers%20Arithmetic%20Coding_3L_-1.ppt">Component_1.ppt</a></td>  <td>Quiz 1</td> <td width=200></td>
+                </tr>
+                <tr>
+                    <td width=100 valign=top>2</td> <td>Intro to Combinational Logic – Part I</td> <td><a href="materials/Component_2%20Combinational%20Logic_2L+1.5L+0.7L_.ppt">Component_2.ppt</a></td> <td></td> <td width=200></td>
+                </tr>
+                <tr>
+                    <td width=100 valign=top>3</td> <td> Intro to Combinational Logic – Part II</td> <td><a href="materials/Component_2%20Combinational%20Logic_2L+1.5L+0.7L_.ppt">Component_2.ppt</a></td> <td>Quiz 2</td> <td width=200></td>
+                </tr>
+                <tr>
+                    <td width=100 valign=top>3</td> <td>Intro to Combinational Logic – Part III</td> <td><a href="materials/Component_2%20Combinational%20Logic_2L+1.5L+0.7L_.ppt">Component_2.ppt</a></td> <td></td> <td width=200></td>
+                </tr>
+                <tr>
+                    <td width=100 valign=top>4</td> <td>Logic Function Minimization – Part I</td> <td><a href="materials/Component_3%20Synthesis_0.8L_.ppt">Component_3.ppt</a></td> <td>Quiz 3</td> <td width=200></td>
+                </tr>
+                <tr>
+                    <td width=100 valign=top>4</td> <td>Logic Function Minimization – Part II</td> <td><a href="materials/Component_3%20Synthesis_0.8L_.ppt">Component_3.ppt</a></td> <td></td> <td width=200></td>
+                </tr>
+                <tr>
+                    <td width=100 valign=top>5</td> <td></td> <td><a href=""></a></td> <td></td> <td width=200>Midterm</td>
+                </tr>
+                <tr>
+                    <td width=100 valign=top>5</td> <td>Complex Gates</td> <td><a href="materials/Component_5%20Combinational%20Blocks_1L_.ppt">Component_5.ppt</a></td> <td>Quiz 4</td> <td width=200></td>
+                </tr>
+                <tr>
+                    <td width=100 valign=top></td> <td>Combinational Logic Design</td> <td><a href="materials/Component_5%20Combinational%20Blocks_1L_.ppt">Component_5.ppt</a></td> <td></td> <td width=200></td>
+                </tr>
+                <tr>
+                    <td width=100 valign=top>6</td> <td>Arithmetic Circuit Design – Part I</td> <td><a href="materials/Component_4%20Arithmetic_2L_-1.ppt">Component_4.ppt</a></td> <td>Quiz 5</td> <td width=200></td>
+                </tr>
+                <tr>
+                    <td width=100 valign=top>7</td> <td>Arithmetic Circuit Design – Part II</td> <td><a href="materials/Component_4%20Arithmetic_2L_-1.ppt">Component_4.ppt</a></td> <td></td> <td width=200></td>
+                </tr>
+                <tr>
+                    <td width=100 valign=top>7</td> <td>Advanced topics</td> <td><a href="materials/Component_6%20Intro%20to%20Sequential%20Logic_1L_.ppt">Component_6.ppt</a></td> <td>Quiz 6</td> <td width=200></td>
+                </tr>
+                <tr>
+                    <td width=100 valign=top>8</td> <td></td> <td><a href=""></a></td> <td></td> <td width=200>Final Exam</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <p><a href="#"><span class="glyphicon glyphicon-arrow-up"></span> back to top</a></p>
+
+    <a name="hall"></a>
+    <div class="page-header"><h2 id="hall">Projects</h2></div>
+
+    <h3>Lab Project 1</h3>
+    <p>Introduction to LogicWorks,
+        <a href="materials/Lab-1_Intro_Faraz.pdf">project_1.pdf</a>.</p>
+
+    <h3>Lab Project 2</h3>
+    <p>Simple combinational logic design,
+        <a href="materials/LAB%202.pdf">project_2.pdf</a>.</p>
+
+    <h3>Lab Project 3</h3>
+    <p>Alarm clock design,
+        <a href="materials/Lab_3_Alarm_Clock.pdf">project_3.pdf</a>.</p>
+
+    <h3>Lab Project 4</h3>
+    <p>Design of RC and CLA adders,
+        <a href="materials/project_bonus_description.pdf">project_4.pdf</a>.</p>
+
+    <p><a href="#"><span class="glyphicon glyphicon-arrow-up"></span> back to top</a></p>
+
+
+    <a name="resources"></a>
+    <div class="page-header"><h2 id="resources">Resources</h2></div>
+    <font size="4px">
+        <ul class="book">
+<!--            <li> &nbsp&nbspAuthors <a href="#">Title</a></li>-->
+            <li> &nbsp&nbspTo be added. <a href="#"></a></li>
+        </ul>
+
+<!--        <ul class="tutorial">-->
+<!--        </ul>-->
+
+<!--        <ul class="code">-->
+<!--        </ul>-->
+
+<!--        <ul class="dataset">-->
+<!--        </ul>-->
+
+<!--        <ul class="demo">-->
+<!--        </ul>-->
+
+<!--        <ul class="industry">-->
+<!--        </ul>-->
+    </font>
+    <br/>
+    <p><a href="#"><span class="glyphicon glyphicon-arrow-up"></span> back to top</a></p>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,583 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta name="generator" content="pandoc">
+    <title>Selected	Topics	in	Information	and	Computational	Systems	- Machine Learning - Spring 2020</title>
+    <script src="../../courses/jquery-1.js"></script>
+    <link rel="stylesheet" href="../../courses/bootstrap.css">
+    <link rel="stylesheet" href="../../courses/bootstrap-theme.css">
+    <script src="../../courses/bootstrap.js"></script>
+    <style>
+        /* http://stackoverflow.com/questions/18325779/bootstrap-3-collapse-show-state-with-chevron-icon */
+        .panel-heading .accordion-toggle:before {
+            font-family: 'Glyphicons Halflings';
+            content: "\e114";
+            float: left;
+            color: grey;
+            padding-right: 6px;
+        }
+        .panel-heading .accordion-toggle.collapsed:before {
+            content: "\e080";
+        }
+
+        .mytext {
+            border-style:solid;
+            border-width:1.5px;
+            margin-left:0px;
+            display: inline-block;
+            float:none;
+            text-align:right;
+            right:0px;
+            padding:1px 6px 1px 6px;
+            position:relative;
+            margin-top:-4px;
+            cursor: pointer;
+            color:#000000;
+            border-radius: 5px;
+            background:#DDDDFF;
+            font-size:13px;
+        }
+
+    </style>
+
+    <style type="text/css">
+        ul.book li {
+            list-style-image:url(../../courses/book_small.png);
+            list-style-position: outside;
+            margin-bottom: 2px;
+            font-size: 16px;
+        }
+        ul.code li {
+            list-style-image:url(../../courses/code_small.png);
+            list-style-position: outside;
+            font-size: 16px;
+        }
+        ul.industry li {
+            list-style-image:url(../../courses/industry_small.png);
+            list-style-position: outside;
+            font-size: 16px;
+        }
+        ul.tutorial li {
+            list-style-image:url(../../courses/tutorial_small.png);
+            list-style-position: outside;
+            font-size: 16px;
+        }
+        ul.dataset li {
+            list-style-image:url(../../courses/dataset_small.png);
+            list-style-position: outside;
+            font-size: 16px;
+        }
+        ul.demo li {
+            list-style-image:url(../../courses/demo1_small.png);
+            list-style-position: outside;
+            font-size: 16px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-11803764-2', 'uchicago.edu');
+    ga('require', 'displayfeatures');
+    ga('send', 'pageview');
+
+</script>
+
+<nav class="navbar navbar-default navbar-static-top" role="navigation">
+    <div class="container">
+        <ul class="nav navbar-nav">
+            <li><a href="#introduction">Overview</a></li>
+            <li><a href="#information">Course Information</a></li>
+<!--            <li><a href="#textbook">Textbook</a></li>-->
+            <li><a href="#requirements">Grading</a></li>
+            <li><a href="#syllabus">Syllabus</a></li>
+            <li><a href="#schedule">Schedule</a></li>
+<!--            <li><a href="#feedback">Leave Feedback</a></li>-->
+            <li><a href="#hall">Projects</a></li>
+            <li><a href="#resources">Resources</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container">
+    <a name="introduction"></a>
+    <div class="page-header"><h1 id="course-imtext">Selected	Topics	in	Information	and	Computational	Systems	- Machine Learning - Spring 2020</h1><font size="5px">Undergraduate Course, Abu Dhabi Campus</font><br/><h3 id="course-CSC420-year">Spring 2020</h3></div>
+    <div class="row">
+        <div style="max-width:100%;">
+            <img src="../../courses/csc420_15.jpg">
+        </div>
+        </br></br>
+        <div class="col-md-13">
+        <span href="#" class="thumbnail">
+              <p><font size="3">TBD</font></p>
+        </span>
+        </div>
+    </div>
+
+    <a name="overview"></a>
+    <div class="page-header"><h2 id="overview">Course Overview</h2></div>
+    <div class="well row">
+        <p>
+            Machine	Learning	is	the	basis	for	the	most	exciting	careers	in	data	analysis
+            today.	This	course	introduces	students	to	the	concepts	of	machine	learning	and	deep	learning.
+            This	course	covers	a	broad	introduction	 to	machine	learning	 techniques,	which	include	both
+            supervised	learning	and	unsupervised	learning	techniques	such	as	classification,	support	vector
+            machines,	decision	trees,	ensemble	learning	and	random	forests,	dimensionality	reduction,	and
+            neural	networks	and	deep	learning.	 In	addition	 to	learning	about	 the	most	effective	machine
+            learning	techniques,	you	will	gain	the	practical	implementation	of	applying	these	techniques	to
+            real	engineering	problems.
+        </p>
+        <div class="media">
+            <p style="margin:-8px 0px 0px 0px;"></p>
+            <h4>Intended Learning Outcomes:</h4>
+            <br>
+            <p style="margin:-15px 0px 0px 0px;"></p>
+            <ul>
+                <li>Develop	the	programming	skills	using	python to	implement	the	basic	machine	learning	algorithms;</li>
+                <li>Understand	the	fundamental	concepts	of	machine	learning algorithms	for	them:	classification,
+                    clustering,	regression,	SVMs,	decision	trees,	dimensionality	reduction,	and	neural	networks	and	deep
+                    learning;</li>
+                <li>Apply	knowledge	of	data	structures	and	algorithms to	analyze	and model	engineering	problems	to
+                    meet	desired	needs;</li>
+            </ul>
+            <br>
+            <p style="margin:-20px 0px 0px 0px;"></p>
+        </div>
+
+        <p>
+            <b>Prerequisites:</b> 	ENGR-AD-202	 Computer	 System	 Programming or	 equivalent programming	skills
+        </p>
+
+    </div>
+    <p><a href="#"><span class="glyphicon glyphicon-arrow-up"></span>back to top</a></p>
+
+    <a name="information"></a>
+    <div class="page-header"><h2 id="citation">Course Information</h2></div>
+    <ul class="list-group">
+        <li class="list-group-item">
+            <div class="media">
+                <div class="col-md-4">
+                    <h3>Time and Location</h3>
+                    <h4>Spring 2020</h4>
+                    <b>Day</b>: &nbsp&nbsp&nbsp&nbsp&nbspTBD</br>
+                    <b>Time</b>: &nbsp&nbsp&nbspTBD</br>
+                    <b>Room</b>: &nbspTBD</br>
+<!--                    <b>Tutorials</b>: TBD</br>-->
+                </div>
+                <div class="col-md-4">
+                    <h3>Instructor</h3>
+                    <h4>Yi Fang, Hamidou Tembine (Co-instructor)</h4>
+                    <b>Email</b>: &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbspyfang@nyu.edu</br>
+                    <b>Homepage</b>: &nbsp &nbsp<a href="http://mmvc.engineering.nyu.edu" target="_blank">http://mmvc.engineering.nyu.edu</a></br>
+                    <b>Office</b>: &nbsp &nbsp &nbsp &nbsp &nbsp &nbspA1-191<br/>
+                    <b>Phone</b>: &nbsp056-3190302
+                </div>
+                <div class="col-md-4">
+                    <h3>TA</h3>
+                    <h4>Tadesse	Mulugeta<br>Email:	tsm8@nyu.edu</h4>
+                </div>
+            </div>
+        </li>
+    </ul>
+
+    <h3>Information Sheet</h3>
+    <p>The information sheet for the class is available <a href="materials/ENGR-UH%204560%20Machine%20Learning.pdf">here</a>. </p>
+
+<!--    <h3>Programming Language(s)</h3>-->
+<!--    <p>TBD</p>-->
+
+    <br/>
+<!--    <p style="margin:-15px 0px 0px 0px;"></p>-->
+
+<!--    <ul class="list-group">-->
+<!--        <li class="list-group-item">-->
+<!--            <div class="media">-->
+<!--                <p style="margin:-8px 0px 0px 0px;"></p>-->
+<!--                <h4>Useful tutorials:</h4>-->
+<!--                <br/>-->
+<!--                <p style="margin:-15px 0px 0px 0px;"></p>-->
+<!--                <ul>-->
+<!--                    <li><b>Matlab</b> <a href="#">tutorial</a> written by Prof. <a href="#">TBD</a></li>-->
+<!--                    <li><b>Python</b> <a href="#">tutorial</a> written especially for this class by <a href="#">TBD</a></li>-->
+<!--                </ul>-->
+<!--                <br/>-->
+<!--                <p style="margin:-20px 0px 0px 0px;"></p>-->
+<!--            </div>-->
+<!--        </li>-->
+<!--    </ul>-->
+<!--    <br/>-->
+<!--    <p style="margin:-25px 0px 0px 0px;"></p>-->
+
+<!--    <h3>Forum</h3>-->
+<!--    <p>This class uses <a href="#">piazza</a>. On this webpage, we will post <b>announcements</b> and <b>assignments</b>. The students will also be able to post <b>questions</b> and  <b>discussions</b> in a forum style manner, either to their instructors or to their peers.</p>-->
+<!--    <p><font size="4"><b>Please sign up<a href="#">here</a> in the beginning of class.</b></font></p>-->
+
+    <p><a href="#"><span class="glyphicon glyphicon-arrow-up"></span> back to top</a></p>
+
+    <a name="textbook"></a>
+    <div class="page-header"><h2 id="textbook">Textbook</h2></div>
+    <p>We will not directly follow any textbook, however, we will require some reading in the textbook below. Additional readings and material will be posted in the <a href="#schedule">schedule</a> table as well as the <a href="#resources">resources</a> section. </p>
+    <ul class="list-group">
+        <li class="list-group-item">
+            <div class="media">
+                <a class="pull-left text-center" href="https://www.amazon.com/Hands-Machine-Learning-Scikit-Learn-TensorFlow/dp/1491962291" target="_blank"><h2><img height=5 src="materials/HandsonFrontCover.jpg" width="110"></h2>Website</a>
+                <a class="pull-left text-center" href=""><h2></h2>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
+                <div class="media-body">
+                    <h3>"Hands-On Machine Learning with Scikit-Learn and TensorFlow: Concepts, Tools, and Techniques to Build Intelligent Systems"</h3>
+                    <h4><a href="#" target="_blank"> Aurélien Géron </a></h4>
+                    <h4>O'Reilly Media, 1st edition (2017)</h4><br/>
+                    <p>The textbook is freely available online and provides a great resource for introduction to machine learning practice.
+                    <p>We will be reading the fourth <a href="#">version</a>.<p>
+                </div>
+            </div>
+        </li>
+    </ul>
+    <p><a href="#"><span class="glyphicon glyphicon-arrow-up"></span> back to top</a></p>
+
+
+
+    <a name="requirements"></a>
+    <div class="page-header"><h2 id="requirements">Grading</h2></div>
+<!--    <p> Each student is expected to complete four assignments which will be in the form of problem sets and programming-->
+<!--        problems, and complete a project. </p>-->
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a class="requirements-toggle collapsed" data-toggle="collapse" data-parent="#requirements" href="#requirements-list">Teaching and Learning Methodologies</a>
+            </h4>
+        </div>
+        <div class="panel-body">
+            Students	 are	 expected	 to	 arrive	 at	 class	 with	 an
+            understanding	of	the	basic	definitions,	concepts,	and	applications	of	relevant	topics.		Class	time
+            will	be	devoted	to	in-depth	discussions	of	course	topics.		Lab	project	assignments	are	dedicated
+            for	 reinforcing	 course	 topics	 via	 solving	 representative	 problem	 sets	 and	 holding	 class
+            discussions.
+<!--            &lt;!&ndash;            <h3>Assignments</h3>&ndash;&gt;-->
+
+<!--&lt;!&ndash;            <p>Assignments will be given <b>every two weeks</b>. They will consist of problem sets and programming problems with the goal of&ndash;&gt;-->
+<!--&lt;!&ndash;                deepening your understanding of the material covered in class. All solutions and programming should be done <b>individually</b>. There will be four&ndash;&gt;-->
+<!--&lt;!&ndash;                assignments altogether, each worth 15% of the final grade.</p>&ndash;&gt;-->
+
+<!--&lt;!&ndash;            <p><b> Deadline:</b> The solutions to the assignments should be submitted by 11.59pm on the date they are due.&ndash;&gt;-->
+<!--&lt;!&ndash;                Anything from 1 minute late to 24 hours will count as one late day.</p>&ndash;&gt;-->
+
+<!--&lt;!&ndash;            <p><b> Lateness policy:</b> Each student will be given a total of 3 free late days. This means that you can hand in three of your assignments one day late,&ndash;&gt;-->
+<!--&lt;!&ndash;                or one assignment three days late. It is up to you to make a good planning of your work. After you have used your 3 day budget, your late assignments will not be accepted.&ndash;&gt;-->
+
+<!--&lt;!&ndash;            <p><b>Plagiarism:</b> We take plagiarism very seriously. Everything you hand in to be marked, namely assignments and projects, must represent your own work. Read <a href="http://www.writing.utoronto.ca/advice/using-sources/how-not-to-plagiarize">How not to plagiarize</a>.&ndash;&gt;-->
+
+<!--&lt;!&ndash;            <h3>Project</h3>&ndash;&gt;-->
+
+<!--&lt;!&ndash;            <p>Each student will be given a topic for the project. You will be able to choose from a list of projects, or propose your&ndash;&gt;-->
+<!--&lt;!&ndash;                own project which will need to be discussed and approved by your instructor. You will need to hand in a report and give a presentation.&ndash;&gt;-->
+<!--&lt;!&ndash;                During the presentation the instructor will ask questions about class material as well as individual assignments. The grade will heavily depend on how well the material is defended and how well the class material is understood by the student.</p>&ndash;&gt;-->
+
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a class="grading-toggle collapsed" data-toggle="collapse" data-parent="#requirements" href="#grading-list">Grading</a>
+            </h4>
+        </div>
+        <div class="panel-body">
+            The	course	will	provide	with	two	tracks	of	assignments	and	grades.	Student	may
+            choose	one	of	two	tracks	for	the	class.	The	first	track	will	be	based	on	six mini-projects,	one	large
+            Page 2 of 5 deep	learning	project,	two	presentations	and	the	second	track	will	be	based	on	six mini-projects
+            and	three	deep	learning	projects.	The	distribution	of	grades	is	subject	to	some	revision	at	the
+            discretion	of	the	instructor. <b>Typical weighting values are given below:</b><br/><br/>
+            <table class="table table-condensed">
+                <tr><td colspan="2" style="text-align:center"><code>Track 1</code></td><td colspan="2" style="text-align:center"><code>Track 2</code></td></tr>
+                <tr><td><code>Mini	Projects</code></td><td>6 * 10%</td><td><code>Mini Projects</code></td><td>6 * 10%</td></tr>
+                <tr><td><code>Large	Deep	Learning Project</code></td><td>1 * 40%</td><td><code>Deep	Learning	Project	One</code></td><td>1 * 20%</td></tr>
+                <tr><td><code></code></td><td></td><td><code>Deep	Learning	Project	Two</code></td><td>1 * 20%</td></tr>
+            </table>
+            <br/>
+            <p style="margin:-45px 0px 0px 0px;"></p>
+        </div>
+    </div>
+
+
+    <p><a href="#"><span class="glyphicon glyphicon-arrow-up"></span> back to top</a></p>
+
+    <a name="syllabus"></a>
+    <div class="page-header"><h2 id="syllabus">Syllabus</h2></div>
+    <p>The topics include both supervised	learning and
+        unsupervised	 learning techniques	 such	 as	 classification,	 support	 vector	 machines,	 decision	 trees,
+        ensemble	 learning	 and	 random	 forests,	 dimensionality	 reduction,	 and	 neural	 networks	 and	 deep
+        learning.</p>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a class="syllabus-toggle collapsed" data-toggle="collapse" data-parent="#syllabus" href="#syllabus-list">Tentative Syllabus &nbsp&nbsp&nbsp<i>(click to Expand / Collapse)</i></a>
+            </h4>
+        </div>
+        <div id="syllabus-list" class="panel-collapse collapse out">
+            <div class="panel-body">
+                <table class="table table-condensed">
+                    <tbody>
+                    <tr>
+                        <th>Introduction</th>
+                    </tr>
+                    <tr>
+                        <th>Regression</th>
+                    </tr>
+                    <tr>
+                        <th>Classification</th>
+                    </tr>
+                    <tr>
+                        <th>Support Vector Machine (SVM)</th>
+                    </tr>
+                    <tr>
+                        <th>Tree</th>
+                    </tr>
+                    <tr>
+                        <th>Ensemble Macine Learning</th>
+                    </tr>
+                    <tr>
+                        <th>K-Nearest Neighbors (kNN)</th>
+                    </tr>
+                    <tr>
+                        <th>Dimensionality Reduction</th>
+                    </tr>
+                    <tr>
+                        <th>Unsupervised Learning: Clustering</th>
+                    </tr>
+                    <tr>
+                        <th>Intro to Neural Networks</th>
+                    </tr>
+                    <tr>
+                        <th>Deep Learning and Its Application</th>
+                    </tr>
+                    </tbody>
+                </table>
+<!--                <a data-toggle="collapse" data-parent="#syllabus" href="#class-list">close Tentative Schedule</a>-->
+            </div>
+        </div>
+    </div>
+    <p><a href="#"><span class="glyphicon glyphicon-arrow-up"></span> back to top</a></p>
+
+
+    <a name="schedule"></a>
+    <div class="page-header"><h2 id="schedule">Schedule</h2></div>
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a class="schedule-toggle collapsed" data-toggle="collapse" data-parent="#schedule" href="#schedule-list">Schedule</a>
+            </h4>
+        </div>
+        <div class="panel-body">
+            <table class="table table-condensed">
+                <tbody>
+                <tr>
+                    <th>Week</th> <th>Lecture Topic</th> <th>Slides</th> <th>Exam schedule</th>
+                </tr>
+                <tr>
+                    <td width=100 valign=top>1</td> <td>Introduction<td><a href="materials/Lecture-001.pdf">Lecture-001.pdf</a><br><a href="materials/Lecture-002.pdf">Lecture-002.pdf</a></td> <td width=200></td>
+                </tr>
+<!--                <tr>-->
+<!--                    <td colspan="5" style="text-align:center;" bgcolor="#9DE6FF"></td>-->
+<!--                </tr>-->
+                <tr>
+                    <td width=100 valign=top>2</td> <td>Regression</td> <td><a href="materials/Lecture-003.pdf">Lecture-003.pdf</a><br><a href="materials/Lecture-004.pdf">Lecture-004.pdf</a></td> <td width=200></td>
+                </tr>
+                <tr>
+                    <td width=100 valign=top>3</td> <td>Classification</td> <td><a href="materials/Lecture-004.pdf">Lecture-004.pdf</a></td> <td width=200></td>
+                </tr>
+                <tr>
+                    <td width=100 valign=top>4</td> <td>Support Vector Machine (SVM)</td> <td><a href="materials/Lecture-005.pdf">Lecture-005.pdf</a></td> <td width=200></td>
+                </tr>
+                <tr>
+                    <td width=100 valign=top>5</td> <td>Tree</td> <td><a href="materials/Lecture-008.pdf">Lecture-008.pdf</a><br><a href="materials/Lecture-008-2.pdf">Lecture-008-2.pdf</a></td> <td width=200></td>
+                </tr>
+                <tr>
+                    <td width=100 valign=top>6</td> <td>Ensemble Machine Learning</td> <td><a href="materials/Lecture-009.pdf">Lecture-009.pdf</a></td> <td width=200></td>
+                </tr>
+                <tr>
+                    <td width=100 valign=top>7</td> <td>K-Nearest Neighbors (kNN)</td> <td><a href="materials/Lecture-006.pdf">Lecture-006.pdf</a></td> <td width=200></td>
+                </tr>
+                <tr>
+                    <td width=100 valign=top>8</td> <td></td> <td></td> <td width=200>Midterm Presentation</td>
+                </tr>
+                <tr>
+                    <td width=100 valign=top>9</td> <td>Dimensionality Reduction</td> <td><a href="materials/Lecture-007.pdf">Lecture-007.pdf</a></td> <td width=200></td>
+                </tr>
+                <tr>
+                    <td width=100 valign=top>10</td> <td>Unsupervised Learning: Clustering</td> <td><a href="materials/Lecture-007.pdf">Lecture-007.pdf</a></td> <td width=200></td>
+                </tr>
+                <tr>
+                    <td width=100 valign=top>11</td> <td>Intro to Neural Networks</td> <td><a href="materials/Lecture-010.pdf">Lecture-010.pdf</a><br><a href="materials/Lecture-012.pdf">Lecture20.pdf</a></td> <td width=200></td>
+                </tr>
+                <tr>
+                    <td width=100 valign=top>12</td> <td>Deep Learning and its Application</td> <td><a href="materials/Lecture-013.pdf">Lecture-013.pdf</a><br><a href="materials/Lecture-014.pdf">Lecture-014.pdf</a><br><a href="materials/Lecture-015.pdf">Lecture-015.pdf</a></td> <td width=200></td>
+                </tr>
+                <tr>
+                    <td width=100 valign=top>13</td> <td>Deep Learning and its Application</td> <td><a href="materials/Lecture-016.pdf">Lecture-016.pdf</a><br><a href="materials/Lecture-017.pdf">Lecture-017.pdf</a><br><a href="materials/Lecture-018.pdf">Lecture-018.pdf</a></td> <td width=200></td>
+                </tr>
+                <tr>
+                    <td width=100 valign=top>14</td> <td></td> <td></td> <td width=200>Final Presentation</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <p><a href="#"><span class="glyphicon glyphicon-arrow-up"></span> back to top</a></p>
+
+    <a name="hall"></a>
+    <div class="page-header"><h2 id="hall">Projects</h2></div>
+
+    <h3>Large Deep Learning Project</h3>
+    <p><b>Large	Deep	Learning:	Object	Recognition	and	Detection	by	Deep	Learning:</b>	In
+        computer	 vision,	object	detection	is	an	important task	to	identify	the	presence,	location,	and
+        type	 of	 one	 or	 more	 objects	 in	 a	 given	figure.	 	It	 is	 a	 challenging	 problem	 that	 includes	 the
+        development	of	the	approaches	for	object	recognition	(e.g.	where	are	they),	object	localization
+        (e.g. what	are	their	extent),	and	object	classification	(e.g.	what	are	they). Recent	deep	learning
+        techniques	have	demonstrated	the	state-of-the-art	results	for	object	detection.	The	“You	Only
+        Look	Once,”	 or	 YOLO was	 developed	as	 the	 pioneering	work	 for	 object	 detection	 using	 deep
+        learning	techniques.		The	YOLO	achieves nearly state-of-the-art	results	with	a	single	end-to-end
+        model	that	can	perform	object	detection	in	real-time. In	this	project,	the	student	will	be	required
+        to	 develop	 a	 YOLO model	 for	 object	 detection	 from	 the	 implementation from	 scratch using
+        PyTorch	library.
+
+    <h3>Deep Learning Project 1</h3>
+    <p><b>CNN	for	Object	Detection	and	Classification:</b>	Image	classification	is	the
+        task	of	assigning	an	input	image	one	label	from	a	fixed	set	of	categories.	This	is	one	of	the	core
+        problems	 in	 Computer	 Vision	 that,	 despite	 its	 simplicity,	 has	 a	 large	 variety	 of	 practical
+        applications. We	would	like	you	to	establish	a	neural	network	involving	advance	DNN	modules
+        (i.e. convolution	layers,	RELU,	pooling	and	 fully	connection	layers	and	etc.)	 to	distinguish	 the
+        specific	category	of	an	input	image. The	implementation	of	CNN	will	be	firstly	trained	with	the
+        training	dataset.	The	trained	model	will	be	evaluated	on	the	testing	dataset.
+        <a href="materials/Deep%20Learning%201.pdf">deep_project_one.pdf</a> and <a href="materials/DL1-LabLecture.pdf">DL1-LabLecture.pdf</a></p>
+
+    <h3>Deep Learning Project 2</h3>
+    <p>	<b>GAN-Human	face	synthesis:</b> The	Generative	Adversarial	Networks,	or
+        GANs,	 were	 introduced as	 an	 architecture	 for	 training	 generative	 models,	 such	 as	 deep
+        convolutional	 neural	 networks	 for	 generating	 images. The	 GANs have	 made	 huge
+        breakthroughs	 and	 can	 now	 produce	 highly	 convincing	 fake	 images	 of animals,	 landscapes,
+        human	faces,	etc. The	generative	adversarial	networks	(GANs)	are	deep	neural	net	architectures
+        comprised	of	two	nets,	pitting	one	against	the	other	(thus	the	“adversarial”). In	this	project,	we
+        will	ask	the	student	to	understand	the	principles	of	the	GANs,	learn	how	generative	algorithms
+        work,	and	for	that,	contrasting	them	with	discriminative	algorithms	is	instructive,		understand
+        how	discriminative	algorithms	try	to	classify	input	data;	that	is,	given	the	features	of	an	instance
+        of	data,	they	predict	a	label	or	category	to	which	that	data	belongs.
+        <a href="materials/Deep%20Learning%202.pdf">deep_project_two.pdf</a> and <a href="materials/DL2-LabLecture.pdf">DL2-LabLecture.pdf</a>.</p>
+
+    <h3>Mini Project 1</h3>
+    <p><b>Regression</b>: In	statistics,	regression	is	a	approach	to	modeling	the	relationship	between	a scalar
+        dependent	 variable	 y	 and	 one	 or	 more	 explanatory	 variables	 (or	 independent variables)
+        denoted	X.	The case	of	one	explanatory	variable	is	called	simple	linear
+        regression.	 For	 more	 than	 one	 explanatory	 variable,	 the	 process	 is	 called	 multiple	 linear
+        regression. Linear	regression	models	are	often	fitted	using	the	least	squares	approach,	but	they
+        may also	be fitted	in	other	ways,	such	as	by	minimizing	the	"lack	of	fit"	in	some	other	norm	(as
+        with	least	absolute	 deviations	 regression),	 or	 by	minimizing	a	 penalized	 version	 of	 the	least
+        square	 loss	 function	 as	 in	 ridge	 regression	 (L2-norm	 penalty)	 and	 lasso	(L1-norm	 penalty).
+        Conversely,	the	least	squares	approach	can	be	used	to	fit	models	that	are	not	linear	models. Thus,
+        although	 the	 terms	 "least	 squares"	 and	 "linear	 model"	 are	 closely	 linked,	 they	 are	 not
+        synonymous. This	project	will	ask	the	student	to	implement	the	regression	model	to	fit	the	data.
+        <a href="materials/Project1-LabLecture.pdf">Project1-LabLecture.pdf</a>.</p>
+
+    <h3>Mini Project 2</h3>
+    <p><b>SVM	for	classification:</b>	A	Support	vector	machines	(SVMs,	also	support	vector	networks)	are
+        supervised	 learning models	 with	 associated	 learning	 algorithms	 that	 analyze	 data	 used	 for
+        classification	 and regression	 analysis.	 Given	 a	 set	 of	 training	 examples,	 each	 marked	 as
+        belonging	to	one	or the	other	of	two	categories,	an	SVM	training	algorithm	builds	a	model	that
+        assigns	new examples	to	one	category	or	the	other,	making	it	a	non-probabilistic	binary	linear
+        classifier	(although	methods	such	as	Platt	scaling	exist	to	use	SVM	in	a	probabilistic classification
+        setting).	An	SVM	model	is	a	representation	of	the	examples	as	points	in	space, mapped	so	that
+        the	examples	of	the	separate	categories	are	divided	by	a	clear	gap	that is	as	wide	as	possible.
+        New	examples	are	 then	mapped	into	 that	 same	 space	and predicted	 to	 belong	 to	a	 category
+        based	on	which	side	of	the	gap	they	fall.	This	gap	is	also called	maximum	margin	and	the	SVM
+        classifier	is	called	maximum	margin	classifier. This	project	will	ask	the	student	to	implement	the
+        SVM	model	to	classify	the	data.
+        <a href="materials/Project2-LabLecture.pdf">Project2-LabLecture.pdf</a> and <a href="materials/Project_Two.pdf">Project_Two.pdf</a>.</p>
+
+    <h3>Mini Project 3</h3>
+    <p><b>K-NN:</b>	 In pattern recognition, the k-nearest neighbors algorithm (k-NN) is a non-parametric method
+        used for classification and regression. K-Nearest Neighbors is one of the most basic yet essential
+        classification algorithms in Machine Learning. It is a supervised learning method which has intense
+        applications in pattern recognition, data mining and intrusion detection. In general, KNN is a model
+        that classifies data points based on the points that are most similar to it. It uses test data to make a
+        guess on what an unclassified point should be classified as. This project will ask the student to train
+        KNN for the data classification.
+        <a href="materials/Project3-LabLecture.pdf">Project3-LabLecture.pdf</a> and <a href="materials/Project3.pdf">Project_Three.pdf</a>.</p>
+
+    <h3>Mini Project 4</h3>
+    <p><b>K-means	and	Hierarchical	Clustering:</b>	K-means	clustering	is	a	method	of	vector	quantization,
+        originally	 from	signal	processing,	 that	is popular	 for	cluster	analysis	in	data	mining.	k-means
+        clustering	aims	to	partition	n	observations into	k	clusters	in	which	each	observation	belongs	to
+        the	 cluster	 with	 the	 nearest	 mean,	 serving	 as a	 prototype	 of	 the	 cluster.	 This	 results	 in	 a
+        partitioning	 of	 the	 data	 space	 into	 Voronoi	 cells. Hierarchical	 clustering	 involves	 creating
+        clusters	 that	 have	 a	 predetermined	 ordering	 from	 top	 to bottom.	 For	 example,	 all	 files	 and
+        Page 4 of 5
+        folders	 on	 the	 hard	 disk	 are	 organized	 in	 a	 hierarchy.	 There	 are two	 types	 of	 hierarchical
+        clustering,	Divisive	and	Agglomerative.
+        <a href="materials/Project4-LabLecture.pdf">Project4-LabLecture.pdf</a> and <a href="materials/Project4.pdf">Project_Four.pdf</a>.</p>
+
+    <h3>Mini Project 5</h3>
+    <p><b>PCA:</b>	 In pattern recognition, high-dimensional data are very common which poses several challenges
+        for classification and regression. The main purposes of a principal component analysis are the analysis
+        of data to identify patterns and finding patterns to reduce the dimensions of the dataset with minimal
+        loss of information. In general, Principal component analysis (PCA) is a procedure for reducing the
+        dimensionality of the variable space by representing it with a few orthogonal (uncorrelated) variables
+        that capture most of its variability. PCA is an unsupervised learning method which find patterns
+        without reference to prior knowledge. This project deals with decision trees in data mining.
+        <a href="materials/Project5-LabLecture.pdf">Project5-LabLecture.pdf</a> and <a href="materials/project5.pdf">Project_Five.pdf</a>.</p>
+
+    <h3>Mini Project 6</h3>
+    <p><b>Classification	with	Neural	Network:</b>	 Artificial Neural Networks (ANN) or connectionist systems
+        are computing systems vaguely inspired by the biological neural networks that constitute animal
+        brains. The neural network itself is not an algorithm, but rather a framework for many different
+        machine learning algorithms to work together and process complex data inputs. Such systems " learn
+        " to perform tasks by considering examples, generally without being programmed with any taskspecific rules. For example, in image recognition, they might learn to identify images that contain cats
+        by analyzing example images that have been manually labeled as "cat" or "no cat" and using the results
+        to identify cats in other images. They do this without any prior knowledge about cats, for example,
+        that they have fur, tails, whiskers and cat-like faces. Instead, they automatically generate identifying
+        characteristics from the learning material that they process.
+        <a href="materials/project6.pdf">Project_Six.pdf</a>.</p>
+
+    <p><a href="#"><span class="glyphicon glyphicon-arrow-up"></span> back to top</a></p>
+
+
+    <a name="resources"></a>
+    <div class="page-header"><h2 id="resources">Resources</h2></div>
+    <font size="4px">
+        <ul class="book">
+<!--            <li> &nbsp&nbspAuthors <a href="#">Title</a></li>-->
+            <li> &nbsp&nbspPyTorch Tutorial A: <a href="materials/PyTorch-A.pdf">PyTroch-A.pdf</a></li>
+            <li> &nbsp&nbspPyTorch Tutorial B: <a href="materials/PyTorch-B.pdf">PyTroch-B.pdf</a></li>
+        </ul>
+
+<!--        <ul class="tutorial">-->
+<!--        </ul>-->
+
+<!--        <ul class="code">-->
+<!--        </ul>-->
+
+<!--        <ul class="dataset">-->
+<!--        </ul>-->
+
+<!--        <ul class="demo">-->
+<!--        </ul>-->
+
+<!--        <ul class="industry">-->
+<!--        </ul>-->
+    </font>
+    <br/>
+    <p><a href="#"><span class="glyphicon glyphicon-arrow-up"></span> back to top</a></p>
+
+</div>
+
+</body>
+</html>

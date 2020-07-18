@@ -1,0 +1,604 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta name="generator" content="pandoc">
+    <title>EL-GY 9143: 3D Computer Vision: Techniques and Applications - Fall 2015</title>
+    <script src="../../courses/jquery-1.js"></script>
+    <link rel="stylesheet" href="../../courses/bootstrap.css">
+    <link rel="stylesheet" href="../../courses/bootstrap-theme.css">
+    <script src="../../courses/bootstrap.js"></script>
+    <style>
+        /* http://stackoverflow.com/questions/18325779/bootstrap-3-collapse-show-state-with-chevron-icon */
+        .panel-heading .accordion-toggle:before {
+            font-family: 'Glyphicons Halflings';
+            content: "\e114";
+            float: left;
+            color: grey;
+            padding-right: 6px;
+        }
+        .panel-heading .accordion-toggle.collapsed:before {
+            content: "\e080";
+        }
+
+        .mytext {
+            border-style:solid;
+            border-width:1.5px;
+            margin-left:0px;
+            display: inline-block;
+            float:none;
+            text-align:right;
+            right:0px;
+            padding:1px 6px 1px 6px;
+            position:relative;
+            margin-top:-4px;
+            cursor: pointer;
+            color:#000000;
+            border-radius: 5px;
+            background:#DDDDFF;
+            font-size:13px;
+        }
+
+    </style>
+
+    <style type="text/css">
+        ul.book li {
+            list-style-image:url(../../courses/book_small.png);
+            list-style-position: outside;
+            margin-bottom: 2px;
+            font-size: 16px;
+        }
+        ul.code li {
+            list-style-image:url(../../courses/code_small.png);
+            list-style-position: outside;
+            font-size: 16px;
+        }
+        ul.industry li {
+            list-style-image:url(../../courses/industry_small.png);
+            list-style-position: outside;
+            font-size: 16px;
+        }
+        ul.tutorial li {
+            list-style-image:url(../../courses/tutorial_small.png);
+            list-style-position: outside;
+            font-size: 16px;
+        }
+        ul.dataset li {
+            list-style-image:url(../../courses/dataset_small.png);
+            list-style-position: outside;
+            font-size: 16px;
+        }
+        ul.demo li {
+            list-style-image:url(../../courses/demo1_small.png);
+            list-style-position: outside;
+            font-size: 16px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-11803764-2', 'uchicago.edu');
+    ga('require', 'displayfeatures');
+    ga('send', 'pageview');
+
+</script>
+
+<nav class="navbar navbar-default navbar-static-top" role="navigation">
+    <div class="container">
+        <ul class="nav navbar-nav">
+            <li><a href="#introduction">Overview</a></li>
+            <li><a href="#information">Course Information</a></li>
+<!--            <li><a href="#textbook">Textbook</a></li>-->
+            <li><a href="#requirements">Grading</a></li>
+            <li><a href="#syllabus">Syllabus</a></li>
+            <li><a href="#schedule">Schedule</a></li>
+<!--            <li><a href="#feedback">Leave Feedback</a></li>-->
+            <li><a href="#hall">Projects</a></li>
+            <li><a href="#resources">Resources</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container">
+    <a name="introduction"></a>
+    <div class="page-header"><h1 id="course-imtext">EL-GY 9143: 3D Computer Vision: Techniques and Applications - Fall 2015</h1><font size="5px">Undergraduate Course, Abu Dhabi Campus</font><br/><h3 id="course-CSC420-year">Fall 2015</h3></div>
+    <div class="row">
+        <div style="max-width:100%;">
+            <img src="../../courses/csc420_15.jpg">
+        </div>
+        </br></br>
+        <div class="col-md-13">
+        <span href="#" class="thumbnail">
+              <p><font size="3">TBD</font></p>
+        </span>
+        </div>
+    </div>
+
+    <a name="overview"></a>
+    <div class="page-header"><h2 id="overview">Course Overview</h2></div>
+    <div class="well row">
+        <p>
+            Advances in informatics technologies coupled with data acquisition techniques
+            have resulted in the production of three dimensional (3D) models at an unprecedented scale across areas
+            as diverse as engineering, science and medicine. We are therefore faced with a dramatic demand for
+            automatic 3D model processing, understanding and analyzing techniques. Researchers are regularly
+            interested in interpreting the 3D shape of such models according to their intrinsic geometric attributes.
+            The effective and efficient interpretation of 3D models is often challenged with the prevalence of non-
+            rigidity within the shapes, the corruption of the shapes due to the presence of geometric noise, and the
+            availability of a large volume of 3D models in innumerable databases. This course will introduce students
+            to the techniques and applications of 3D computer vision. The focus of this course will be recent methods
+            for 3D shape matching, retrieval, registration, recognition, segmentation, classification and clustering.
+        </p>
+        <div class="media">
+            <p style="margin:-8px 0px 0px 0px;"></p>
+            <h4>Intended Learning Outcomes:</h4>
+            <br>
+            <p style="margin:-15px 0px 0px 0px;"></p>
+            <ul>
+                <li>Describe the representation of 3D image data.</li>
+                <li>Develop an efficient 3D object search engine.</li>
+                <li>Develop techniques for 3D object registration and matching.</li>
+                <li>Develop methods for robust 3D object recognition and segmentation.</li>
+                <li>Apply knowledge of 3D image data analysis techniques to analyze and model engineering problems to meet desired needs.</li>
+            </ul>
+            <br>
+            <p style="margin:-20px 0px 0px 0px;"></p>
+        </div>
+
+        <p>
+            <b>Prerequisites: </b>MA 2012 (Linear Algebra) or equivalents, and proficiency in programming (Matlab is required and C++ is optional)
+        </p>
+
+    </div>
+    <p><a href="#"><span class="glyphicon glyphicon-arrow-up"></span>back to top</a></p>
+
+    <a name="information"></a>
+    <div class="page-header"><h2 id="citation">Course Information</h2></div>
+    <ul class="list-group">
+        <li class="list-group-item">
+            <div class="media">
+                <div class="col-md-4">
+                    <h3>Time and Location</h3>
+                    <h4>Fall 2015</h4>
+                    <b>Day</b>: &nbsp&nbsp&nbsp&nbsp&nbspM-W</br>
+                    <b>Time</b>: &nbsp&nbsp&nbsp11:50am-1:05pm</br>
+                    <b>Room</b>: &nbspTBD</br>
+<!--                    <b>Tutorials</b>: TBD</br>-->
+                </div>
+                <div class="col-md-4">
+                    <h3>Instructor</h3>
+                    <h4>Yi Fang</h4>
+                    <b>Email</b>: &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbspyfang@nyu.edu</br>
+                    <b>Homepage</b>: &nbsp &nbsp<a href="http://mmvc.engineering.nyu.edu" target="_blank">http://mmvc.engineering.nyu.edu</a></br>
+                    <b>Office</b>: &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp2 Metrotech Center, 10.069<br/>
+<!--                    <b>Phone</b>: &nbsp056-3190302-->
+                </div>
+<!--                <div class="col-md-4">-->
+<!--                    <h3>Lab Instructor</h3>-->
+<!--                    <h4>Guoxian	Dai</h4>-->
+<!--                </div>-->
+            </div>
+        </li>
+    </ul>
+
+    <h3>Information Sheet</h3>
+    <p>The information sheet for the class is available <a href="materials/EL-9143%20Course%20Syllabus.pdf">here</a>. </p>
+
+    <h3>Software for Lab</h3>
+    <p>
+        Computer and software: Students should have access to computers (preferably laptop) with the
+        following programs installed: Matlab, Paraview and LaTeX. Discuss with the instructor if you have
+        problems.
+    </p>
+
+    <br/>
+<!--    <p style="margin:-15px 0px 0px 0px;"></p>-->
+
+<!--    <ul class="list-group">-->
+<!--        <li class="list-group-item">-->
+<!--            <div class="media">-->
+<!--                <p style="margin:-8px 0px 0px 0px;"></p>-->
+<!--                <h4>Useful tutorials:</h4>-->
+<!--                <br/>-->
+<!--                <p style="margin:-15px 0px 0px 0px;"></p>-->
+<!--                <ul>-->
+<!--                    <li><b>Matlab</b> <a href="#">tutorial</a> written by Prof. <a href="#">TBD</a></li>-->
+<!--                    <li><b>Python</b> <a href="#">tutorial</a> written especially for this class by <a href="#">TBD</a></li>-->
+<!--                </ul>-->
+<!--                <br/>-->
+<!--                <p style="margin:-20px 0px 0px 0px;"></p>-->
+<!--            </div>-->
+<!--        </li>-->
+<!--    </ul>-->
+<!--    <br/>-->
+<!--    <p style="margin:-25px 0px 0px 0px;"></p>-->
+
+<!--    <h3>Forum</h3>-->
+<!--    <p>This class uses <a href="#">piazza</a>. On this webpage, we will post <b>announcements</b> and <b>assignments</b>. The students will also be able to post <b>questions</b> and  <b>discussions</b> in a forum style manner, either to their instructors or to their peers.</p>-->
+<!--    <p><font size="4"><b>Please sign up<a href="#">here</a> in the beginning of class.</b></font></p>-->
+
+    <p><a href="#"><span class="glyphicon glyphicon-arrow-up"></span> back to top</a></p>
+
+    <a name="textbook"></a>
+    <div class="page-header"><h2 id="textbook">Textbook</h2></div>
+    <p>We will not directly follow any textbook, however, we will require some reading in the textbook below. Additional readings and material will be posted in the <a href="#schedule">schedule</a> table as well as the <a href="#resources">resources</a> section. </p>
+    <ul class="list-group">
+        <li class="list-group-item">
+            <div class="media">
+                <a class="pull-left text-center" href="https://www.amazon.com/Geometric-Modeling-Michael-Mortenson/dp/0831132981" target="_blank"><h2><img height=5 src="materials/GeometricFrontCover.jpg" width="110"></h2>Website</a>
+                <a class="pull-left text-center" href=""><h2></h2>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
+                <div class="media-body">
+                    <h3>"Geometric Modeling"</h3>
+                    <h4><a href="#" target="_blank">Michael Mortenson </a></h4>
+                    <h4>Industrial Press, Inc., 3rd edition (2006)</h4><br/>
+                    <p>The textbook is freely available online and provides a great resource for introduction to digital design.</p>
+                </div>
+            </div>
+        </li>
+    </ul>
+    <p><a href="#"><span class="glyphicon glyphicon-arrow-up"></span> back to top</a></p>
+
+
+
+    <a name="requirements"></a>
+    <div class="page-header"><h2 id="requirements">Grading</h2></div>
+<!--    <p> Each student is expected to complete four assignments which will be in the form of problem sets and programming-->
+<!--        problems, and complete a project. </p>-->
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a class="requirements-toggle collapsed" data-toggle="collapse" data-parent="#requirements" href="#requirements-list">Teaching and Learning Methodologies</a>
+            </h4>
+        </div>
+        <div class="panel-body">
+            Students are expected to arrive at class with an understanding
+            of the basic definitions, concepts, and applications of relevant topics. Class time will be devoted to in-
+            depth discussions of course topics. Project assignments are dedicated for reinforcing course topics via
+            solving representative problem sets and holding class discussions.
+<!--            &lt;!&ndash;            <h3>Assignments</h3>&ndash;&gt;-->
+
+<!--&lt;!&ndash;            <p>Assignments will be given <b>every two weeks</b>. They will consist of problem sets and programming problems with the goal of&ndash;&gt;-->
+<!--&lt;!&ndash;                deepening your understanding of the material covered in class. All solutions and programming should be done <b>individually</b>. There will be four&ndash;&gt;-->
+<!--&lt;!&ndash;                assignments altogether, each worth 15% of the final grade.</p>&ndash;&gt;-->
+
+<!--&lt;!&ndash;            <p><b> Deadline:</b> The solutions to the assignments should be submitted by 11.59pm on the date they are due.&ndash;&gt;-->
+<!--&lt;!&ndash;                Anything from 1 minute late to 24 hours will count as one late day.</p>&ndash;&gt;-->
+
+<!--&lt;!&ndash;            <p><b> Lateness policy:</b> Each student will be given a total of 3 free late days. This means that you can hand in three of your assignments one day late,&ndash;&gt;-->
+<!--&lt;!&ndash;                or one assignment three days late. It is up to you to make a good planning of your work. After you have used your 3 day budget, your late assignments will not be accepted.&ndash;&gt;-->
+
+<!--&lt;!&ndash;            <p><b>Plagiarism:</b> We take plagiarism very seriously. Everything you hand in to be marked, namely assignments and projects, must represent your own work. Read <a href="http://www.writing.utoronto.ca/advice/using-sources/how-not-to-plagiarize">How not to plagiarize</a>.&ndash;&gt;-->
+
+<!--&lt;!&ndash;            <h3>Project</h3>&ndash;&gt;-->
+
+<!--&lt;!&ndash;            <p>Each student will be given a topic for the project. You will be able to choose from a list of projects, or propose your&ndash;&gt;-->
+<!--&lt;!&ndash;                own project which will need to be discussed and approved by your instructor. You will need to hand in a report and give a presentation.&ndash;&gt;-->
+<!--&lt;!&ndash;                During the presentation the instructor will ask questions about class material as well as individual assignments. The grade will heavily depend on how well the material is defended and how well the class material is understood by the student.</p>&ndash;&gt;-->
+
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a class="grading-toggle collapsed" data-toggle="collapse" data-parent="#requirements" href="#grading-list">Grading</a>
+            </h4>
+        </div>
+        <div class="panel-body">
+            <b>Students are expected to understand the basic definitions, concepts, and
+                applications of relevant topics in class. Grades will be based on four mini projects, one final project,
+                reportand presentation. Project will be assigned after the completion of each specific topic. The distribution of
+                grades is subject to some revision at the discretion of the instructor. Typical weighting values are as
+                follow:</b><br/><br/>
+            <table class="table table-condensed">
+                <tr><td><code>First four projects</code></td><td>4 * 15%</td>
+                </tr><tr><td><code>Final project, report, presentation</code></td><td>40%</td>
+            </tr></table>
+            <br/>
+            <p style="margin:-45px 0px 0px 0px;"></p>
+        </div>
+    </div>
+
+<!--    <div class="panel panel-default">-->
+<!--        <div class="panel-heading">-->
+<!--            <h4 class="panel-title">-->
+<!--                <a class="requirements-toggle collapsed" data-toggle="collapse" data-parent="#requirements" href="#requirements-list">Related	Laboratory	Exercises</a>-->
+<!--            </h4>-->
+<!--        </div>-->
+<!--        <div class="panel-body">-->
+<!--        </div>-->
+<!--    </div>-->
+
+
+    <p><a href="#"><span class="glyphicon glyphicon-arrow-up"></span> back to top</a></p>
+
+    <a name="syllabus"></a>
+    <div class="page-header"><h2 id="syllabus">Syllabus</h2></div>
+    <p>The topics	are	subject	to	change.</p>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a class="syllabus-toggle collapsed" data-toggle="collapse" data-parent="#syllabus" href="#syllabus-list">Tentative Syllabus &nbsp&nbsp&nbsp<i>(click to Expand / Collapse)</i></a>
+            </h4>
+        </div>
+        <div id="syllabus-list" class="panel-collapse collapse out">
+            <div class="panel-body">
+                <table class="table table-condensed">
+                    <tbody>
+                    <tr>
+                        <th>Introduction to 3D Computer Vision</th>
+                    </tr>
+                    <tr>
+                        <th>Geometric transformation</th>
+                    </tr>
+                    <tr>
+                        <td><code>Linear transformation</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>Matrix vector products</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>Affine transformation</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>Iterative closest point</code></td>
+                    </tr>
+
+                    <tr>
+                        <th>Group Project Discussion Day</th>
+                    </tr>
+                    <tr>
+                        <th>Introduction to 3D Shape Analysis</th>
+                    </tr>
+                    <tr>
+                        <td><code>3D model representation</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>3D Euclidean distance</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>3D global shape descriptor</code></td>
+                    </tr>
+
+                    <tr>
+                        <th>3D Shape Retrieval</th>
+                    </tr>
+                    <tr>
+                        <td><code>Introduction of shape matching</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>Design of global shape descriptor</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>Shape retrieval engine</code></td>
+                    </tr>
+
+                    <tr>
+                        <th>Group Project Discussion Day</th>
+                    </tr>
+
+                    <tr>
+                        <th>3D Shape Segmentation</th>
+                    </tr>
+                    <tr>
+                        <td><code>Introduction of shape segmentation</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>Shape segmentation based on point signature</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>Shape segmentation based on pairwise distance</code></td>
+                    </tr>
+
+                    <tr>
+                        <th>Group Project Discussion Day</th>
+                    </tr>
+
+                    <tr>
+                        <th>Data-driven Shape Analysis</th>
+                    </tr>
+                    <tr>
+                        <td><code>Data-driven shape retrieval</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>Data-driven shape registration</code></td>
+                    </tr>
+
+                    <tr>
+                        <th>Final Project Discusssion (stage 0)</th>
+                    </tr>
+                    <tr>
+                        <td><code>Topic determined</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>Group presentation of proposed idea</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>Classroom discussion</code></td>
+                    </tr>
+
+                    <tr>
+                        <th>Final Project Discussion (stage 1)</th>
+                    </tr>
+                    <tr>
+                        <td><code>Project progress update</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>Group presentation of updated progress</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>Classroom discussion</code></td>
+                    </tr>
+
+                    <tr>
+                        <th>Final Project Demo and Presentation (section I)</th>
+                    </tr>
+                    <tr>
+                        <td><code>Project demo</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>Group presentation</code></td>
+                    </tr>
+
+                    <tr>
+                        <th>Final Project Demo and Presentation (section II)</th>
+                    </tr>
+                    <tr>
+                        <td><code>Project demo</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>Group presentation</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>Final report paper due</code></td>
+                    </tr>
+                    </tbody>
+                </table>
+<!--                <a data-toggle="collapse" data-parent="#syllabus" href="#class-list">close Tentative Schedule</a>-->
+            </div>
+        </div>
+    </div>
+    <p><a href="#"><span class="glyphicon glyphicon-arrow-up"></span> back to top</a></p>
+
+
+    <a name="schedule"></a>
+    <div class="page-header"><h2 id="schedule">Schedule</h2></div>
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a class="schedule-toggle collapsed" data-toggle="collapse" data-parent="#schedule" href="#schedule-list">Schedule</a>
+            </h4>
+        </div>
+        <div class="panel-body">
+            <table class="table table-condensed">
+                <tbody>
+                <tr>
+                    <th>Week</th> <th>Lecture Topic</th> <th>Slides</th> <th>Project</th>
+                </tr>
+                <tr>
+                    <td width=100 valign=top>Sept. 2</td> <td>Introduction to 3D Computer Vision<br>Geometric transformation</td> <td><a href="materials/Lecture_001.ppt">Lecture_001.ppt</a></td> <td width=200>Project One Assigned</td>
+                </tr>
+<!--                <tr>-->
+<!--                    <td colspan="5" style="text-align:center;" bgcolor="#9DE6FF"></td>-->
+<!--                </tr>-->
+                <tr>
+                    <td width=100 valign=top>Sept. 9</td> <td>Group Project Discussion Day</td> <td></td> <td width=200></td>
+                </tr>
+                <tr>
+                    <td width=100 valign=top>Sept. 16</td> <td>Introduction to 3D Shape Analysis</td> <td><a href="materials/Lecture_002.ppt">Lecture_002.ppt</a></td>  <td width=200></td>
+                </tr>
+                <tr>
+                    <td width=100 valign=top>Sept. 23</td> <td>Introduction to 3D Shape Analysis</td> <td><a href="materials/Lecture_003.ppt">Lecture_003.ppt</a></td> <td width=200></td>
+                </tr>
+                <tr>
+                    <td width=100 valign=top>Sept. 30</td> <td>3D Shape Retrieval</td> <td><a href="materials/Lecture_004.ppt">Lecture_004.ppt</a></td> <td width=200>Project Two Assigned</td>
+                </tr>
+                <tr>
+                    <td width=100 valign=top>Oct. 7</td> <td>Group Projection Discussion Day</td> <td></td> <td width=200></td>
+                </tr>
+                <tr>
+                    <td width=100 valign=top>Oct. 14</td> <td>3D Shape Registration</td> <td><a href="materials/Lecture_005.ppt">Lecture_005.ppt</a></td> <td width=200>Project Three Assigned</td>
+                </tr>
+                <tr>
+                    <td width=100 valign=top>Oct. 21</td> <td>Group Project Discussion Day</td> <td></td> <td width=200></td>
+                </tr>
+                <tr>
+                    <td width=100 valign=top>Oct. 28</td> <td>3D Shape Segmentation</td> <td><a href="materials/Lecture_006.ppt"></a></td> <td width=200>Project Four Assigned</td>
+                </tr>
+                <tr>
+                    <td width=100 valign=top>Nov. 4</td> <td>Group Project Discussion Day</td> <td></td> <td width=200></td>
+                </tr>
+                <tr>
+                    <td width=100 valign=top>Nov. 11</td> <td>Data-driven Shape Analysis</td> <td><a href="materials/Lecture_007.ppt">Lecture_007.ppt</a></td> <td width=200></td>
+                </tr>
+                <tr>
+                    <td width=100 valign=top>Nov. 18</td> <td>Data-driven Shape Analysis</td> <td><a href="materials/Lecture_007.ppt">Lecture_007.ppt</a></td> <td width=200>Call for Final Project</td>
+                </tr>
+                <tr>
+                    <td width=100 valign=top>Nov. 25</td> <td>Final Project Discussion (stage 0)</td> <td></td> <td width=200></td>
+                </tr>
+                <tr>
+                    <td width=100 valign=top>Dec. 2</td> <td>Final Project Discussion (stage 1)</td> <td></td> <td width=200></td>
+                </tr>
+                <tr>
+                    <td width=100 valign=top>Dec. 9</td> <td>Final Project Demo and Presentation (section I)</td> <td></td> <td width=200>Final Project and Presentation</td>
+                </tr>
+                <tr>
+                    <td width=100 valign=top>Dec. 16</td> <td>Final Project Demo Presentation (section II)</td> <td></td> <td width=200></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <p><a href="#"><span class="glyphicon glyphicon-arrow-up"></span> back to top</a></p>
+
+    <a name="hall"></a>
+    <div class="page-header"><h2 id="hall">Projects</h2></div>
+
+    <h3>Project 1</h3>
+    <p>In this project, you are asked to transform the given source data to best match the
+        target model by implementing Iterative Closest Point (ICP) Algorithm in Matlab.
+        <a href="materials/Project_One.pdf">project_1.pdf</a>.</p>
+
+    <h3>Project 2</h3>
+    <p>In this project, you are going to design a shape search engine on dataset TOSCA
+        to retrieve relevant 3D shapes for given query in Matlab. The
+        dataset contains a total 147 objects, including 9 cats, 6 centaurs, 11 dogs, 21 gorillas,
+        17 horses, 15 lionesses, 3 wolves, 6 seahorses, 24 female figures and two different
+        male figures, containing 15 and 20 poses.
+        <a href="materials/Project%202.pdf">project_2.pdf</a>.</p>
+
+    <h3>Project 3</h3>
+    <p>In this project, you are going to match pairs of corresponding points among given
+        models (mesh015.off and mesh054.off) by implementing Hungarian algorithm.
+        <a href="materials/Project%203.pdf">project_3.pdf</a>.</p>
+
+    <h3>Project 4</h3>
+    <p>In this project, you are going to implement 3D shape segmentation on given 3 centaur
+        models with different poses (centaur1.off, centaur2.off and centaur3.off).
+        <a href="materials/Project%204.pdf">project_4.pdf</a>.</p>
+
+    <p><a href="#"><span class="glyphicon glyphicon-arrow-up"></span> back to top</a></p>
+
+
+    <a name="resources"></a>
+    <div class="page-header"><h2 id="resources">Resources</h2></div>
+    <font size="4px">
+        <ul class="book">
+<!--            <li> &nbsp&nbspAuthors <a href="#">Title</a></li>-->
+            <li> &nbsp&nbspTo be added. <a href="#"></a></li>
+        </ul>
+
+<!--        <ul class="tutorial">-->
+<!--        </ul>-->
+
+<!--        <ul class="code">-->
+<!--        </ul>-->
+
+<!--        <ul class="dataset">-->
+<!--        </ul>-->
+
+<!--        <ul class="demo">-->
+<!--        </ul>-->
+
+<!--        <ul class="industry">-->
+<!--        </ul>-->
+    </font>
+    <br/>
+    <p><a href="#"><span class="glyphicon glyphicon-arrow-up"></span> back to top</a></p>
+
+</div>
+
+</body>
+</html>

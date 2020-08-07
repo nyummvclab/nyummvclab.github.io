@@ -1,0 +1,140 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title><center>Daitao Xing</center></title>
+<style>
+	img.rounded-img {
+		border: 1px solid #eeeeee;
+		border-radius: 10px ;
+		-moz-border-radius: 10px ;
+		-webkit-border-radius: 10px ;
+	}
+	#aa {
+    font-size : 30px;
+		color:black;
+  }
+	#bb {
+    font-size : 15px;
+		color:black;
+  }
+	.div1{
+
+        margin:0 auto;
+
+        width:1000px;
+
+    }
+</style></head>
+
+
+
+
+<body>
+
+<h1><center>Daitao Xing</h1>
+
+<br>
+
+	<div class="div1">
+		<h2>Personal Information:</h2>
+	  <table cellpadding="5">
+
+	    <tbody>
+		<tr>
+	      <td><b>Status:</b></td>
+				<td><b>MS Student</b></td>
+	   </tr>
+		 <tr>
+ 	      <td><b>Program:</b></td>
+ 				<td><b>Computer  Science  and  Engineering</b></td>
+ 	   </tr>
+		 <tr>
+ 	      <td><b>School:</b></td>
+ 				<td><b>Tandon School of Engineering, New York University</b></td>
+ 	   </tr>
+		 <tr>
+ 	      <td><b>RA Period:</b></td>
+ 				<td><b>From 2018-09 to 2019-06</b></td>
+ 	   </tr>
+	</tbody></table>
+
+<h2>Biography:</h2>
+
+  <table cellpadding="5">
+
+    <tbody>
+	<tr>
+      <td>
+        <b padding: 10px;>I'm a Ph.D. student at New York University. Before that, I was a research assistant in NYU Multimedia and Visual Computing Lab, advised by Professor Yi Fang. I am broadly interested in 3D Computer Vision, Pattern Recognition and Deep Learning.   </b>
+			</td>
+			</tr>
+</tbody></table>
+
+
+<h2>Research Project:</h2>
+<a href="https://arxiv.org/pdf/1711.11249.pdf" id="aa" ><center>ArbiText: Arbitrary-Oriented Text Detection in Unconstrained Scene</a>
+<h3 align="left">1 Description</h3>
+<p style="text-align:justify; text-justify:inter-ideograph;">
+	Arbitrary-oriented text detection in the wild is a very
+challenging task, due to the aspect ratio, scale, orientation, and illumination variations. In this project, we propose a novel method, namely Arbitrary-oriented Text (or
+ArbText for short) detector, for efficient text detection in
+unconstrained natural scene images. Specifically, we first
+adopt the circle anchors rather than the rectangular ones
+to represent bounding boxes, which is more robust to orientation variations. Subsequently, we incorporate a pyramid pooling module into the Single Shot MultiBox Detector framework, in order to simultaneously explore the local and global visual information, which can therefore generate more confidential detection results. Experiments on
+established scene-text datasets, such as the ICDAR 2015
+and MSRA-TD500 datasets, have demonstrated the superior performance of the proposed method, compared to the
+state-of-the-art approaches.
+</p>
+<img src="./figures/DaitaoXing1.png" width="800"/>
+<p>Figure 1: The Framework of the Proposed Method.</p>
+<h3 align="left">2 Method</h3>
+<p style="text-align:justify; text-justify:inter-ideograph;">
+	In this
+project, we propose a novel method, namely Arbitrary-oriented Text (or
+ArbText for short) detector, for efficient text detection in
+unconstrained natural scene images. As displayed in Figure.1, given an input image with a size of 384×384, VGG-16 base network
+outputs the first feature map from conv4 3 layer. More feature maps with cascading sizes are extracted from extra layers
+following the first feature map. The first feature map is also used to produce different sub-region representations through the
+Pyramid Pooling Module. These representation layers are then concatenate feature maps with same size to output the final
+feature maps. Finally, those maps are fed into a convolution layer to get the final.
+</p>
+<img src="./figures/DaitaoXing3.png" width="400"/>
+<p>Table 1: Comparison results of various methods on the
+MSRA-TD500 dataset.</p>
+<h3 align="left">3 Results</h3>
+<p style="text-align:justify; text-justify:inter-ideograph;">
+	In this section, in order to evaluate the performance of the proposed
+method, we ran experiments on two benchmark datasets:
+the ICDAR 2015 dataset and the MSRA-TD500(TD500)
+dataset. Figure.2 shows several detection results taken from the
+testing dataset of ICDAR 2015. Our proposed method
+ArbiText can distinguish and localize all kinds of scene text
+in noisy backgrounds. As shown in Table 1, we list the results of our model along with other
+state-of-art object and text detection methods. The results
+were obtained from the original papers. The best result of
+this dataset was obtained by Seglink which achieved a
+F-measure score of 75.0%. However, our model obtained
+a score of 75.9%. The improvement comes from the high
+precision rate we obtained, which outperforms the second highest model by 6.1%.
+</p>
+<img src="./figures/DaitaoXing2.png" width="600"/>
+<p>Figure 2: Results of ArtTex on the ICDAR2015 dataset.</p>
+</div>
+<!-- <ul style="list-style: none;"><li> -->
+<script type="text/javascript" src="./Andrew Owens_files/footer.js"></script>
+
+
+
+
+</a></div></body>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-59284902-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</html>

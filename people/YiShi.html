@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title><center>Yi Shi</center></title>
+<style>
+	img.rounded-img {
+		border: 1px solid #eeeeee;
+		border-radius: 10px ;
+		-moz-border-radius: 10px ;
+		-webkit-border-radius: 10px ;
+	}
+	#aa {
+    font-size : 30px;
+		color:black;
+  }
+	#bb {
+    font-size : 15px;
+		color:black;
+  }
+	.div1{
+
+        margin:0 auto;
+
+        width:1000px;
+
+    }
+</style></head>
+
+
+
+<div class="div1">
+<body>
+	<table border="0" cellspacing="20">
+	  <tbody><tr>
+	    <td><img class="rounded-img" src="./figures/YiShi_Fig.jpeg" style="height:250px"></td>
+	    <td width="30"></td>
+	    <td valign="top">
+				<br><br><br><br>
+	      <font size="8">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Yi Shi</font>
+	    </td>
+	  </tr></tbody></table>
+
+		<h2>Personal Information:</h2>
+	  <table cellpadding="5">
+
+	    <tbody>
+		<tr>
+	      <td><b>Status:</b></td>
+				<td><b>MS Student</b></td>
+	   </tr>
+		 <tr>
+ 	      <td><b>Program:</b></td>
+ 				<td><b>Computer  Science  and  Engineering</b></td>
+ 	   </tr>
+		 <tr>
+ 	      <td><b>School:</b></td>
+ 				<td><b>Tandon School of Engineering, New York University</b></td>
+ 	   </tr>
+		 <tr>
+ 	      <td><b>RA Period:</b></td>
+ 				<td><b>From 2019-09 to 2020-06</b></td>
+ 	   </tr>
+	</tbody></table>
+
+<h2>Biography:</h2>
+
+  <table cellpadding="5">
+
+    <tbody>
+	<tr>
+      <td>
+        <b padding: 10px;>I'm a master student at New York University and a research assistant in NYU Multimedia and Visual Computing Lab, advised by Professor Yi Fang. I am broadly interested in 3D Computer Vision, Pattern Recognition and Deep Learning.  </b>
+			</td>
+			</tr>
+</tbody></table>
+
+
+<h2>Research Project:</h2>
+<a href="https://openaccess.thecvf.com/content_CVPR_2020/papers/Shi_Unsupervised_Deep_Shape_Descriptor_With_Point_Distribution_Learning_CVPR_2020_paper.pdf" id="aa" ><center>Unsupervised 3D Deep Learning</a>
+<h3 align="left">1 Description</h3>
+<p style="text-align:justify; text-justify:inter-ideograph;">
+	Deep learning models have achieved great success in supervised shape descriptor learning for 3D shape retrieval,
+classification, and correspondence. However, the unsupervised shape descriptor calculated via deep learning is less
+studied than that of supervised ones due to the design challenges of unsupervised neural network architecture. This
+paper proposes a novel probabilistic framework for the
+learning of unsupervised deep shape descriptors with point
+distribution learning. In our approach, we firstly associate
+each point with a Gaussian, and the point clouds are modeled as the distribution of the points. We then use deep
+neural networks (DNNs) to model a maaximum likelihood
+estimation process that is traditionally solved with an iterative Expectation-Maximization (EM) process. Our key
+novelty is that “training” these DNNs with unsupervised
+self-correspondence L2 distance loss will elegantly reveal
+the statically significant deep shape descriptor representation for the distribution of the point clouds. We have conducted experiments over various 3D datasets. Qualitative
+and quantitative comparisons demonstrate that our proposed method achieves superior classification performance
+over existing unsupervised 3D shape descriptors. In addition, we verified the following attractive properties of our
+shape descriptor through experiments: multi-scale shape
+representation, robustness to shape rotation, and robustness
+to noise.
+</p>
+<img src="./figures/YiShi1.png" width="700"/>
+<p>Figure 1: The pipeline of the proposed method.</p>
+<h3 align="left">2 Method</h3>
+<p style="text-align:justify; text-justify:inter-ideograph;">
+	This project proposes a novel probabilistic framework for the
+	learning of unsupervised deep shape descriptors with point
+	distribution learning. As displayed in Figure.1, we concatenate a randomly initialized vector z to each point of the sampled instance shape. The L2 point
+	distance loss between the decoded point set and the original point set will be calculated. During the decoder training phase, the loss will
+	be back-propagated to update the shape descriptors and decoder simultaneously. During the descriptor generation phase, the loss will only
+	be used to update the shape descriptors.
+</p>
+<img src="./figures/YiShi3.png" width="400"/>
+<p>Table 1: Classification evaluation on ModelNet40.</p>
+<h3 align="left">3 Results</h3>
+<p style="text-align:justify; text-justify:inter-ideograph;">
+	In this section, we evaluate our shape descriptor by performing a classification task. For a direct and accurate comparison, we
+follow the same data settings as Learning a probabilistic latent space of object shapes
+via 3d generative-adversarial modeling, and our network
+is trained with the seven major categories of ShapeNet.We then evaluate the generated feature descriptors on the
+benchmark ModelNet40 by training a simple MLP classifier. There are unsupervised approaches where
+the networks are trained using the full 55 categories from
+the ShapeNet55 dataset that contains 57,000 shapes in total. Due to different data settings in the experiment, a direct
+comparison based on accuracy might not be most appropriate. Table 1 shows the performance comparison between
+our proposed approach and the state-of-the-art supervised
+and unsupervised methods. Our unsupervised shape representation outperforms the 3DGAN by scoring 84.7% on
+ModelNet40. Considered that most of the categories from
+ModelNet are completely novel to our model, it demonstrates a great out-of-category generalization capability.
+</p>
+<img src="./figures/YiShi2.png" width="600"/>
+<p>Figure 2: Reconstruction results of shape descriptors on instances from ShapeNet.</p>
+</div>
+<!-- <ul style="list-style: none;"><li> -->
+<script type="text/javascript" src="./Andrew Owens_files/footer.js"></script>
+
+
+
+
+</a></div></body>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-59284902-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</html>

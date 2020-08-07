@@ -1,0 +1,140 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title><center>Munachiso Nwadike</center></title>
+<style>
+	img.rounded-img {
+		border: 1px solid #eeeeee;
+		border-radius: 10px ;
+		-moz-border-radius: 10px ;
+		-webkit-border-radius: 10px ;
+	}
+	#aa {
+    font-size : 30px;
+		color:black;
+  }
+	#bb {
+    font-size : 15px;
+		color:black;
+  }
+	.div1{
+
+        margin:0 auto;
+
+        width:1000px;
+
+    }
+</style></head>
+
+
+
+
+<body>
+
+<h1><center>Munachiso Nwadike</h1>
+
+<br>
+
+	<div class="div1">
+		<h2>Personal Information:</h2>
+	  <table cellpadding="5">
+
+	    <tbody>
+		<tr>
+	      <td><b>Status:</b></td>
+				<td><b>Undergraduate Student</b></td>
+	   </tr>
+		 <tr>
+ 	      <td><b>Program:</b></td>
+ 				<td><b>Computer Science</b></td>
+ 	   </tr>
+		 <tr>
+ 	      <td><b>School:</b></td>
+ 				<td><b>New York University Abu Dhabi</b></td>
+ 	   </tr>
+		 <tr>
+ 	      <td><b>RA Period:</b></td>
+ 				<td><b>From 2019-09 to 2020-05</b></td>
+ 	   </tr>
+	</tbody></table>
+
+<h2>Biography:</h2>
+
+  <table cellpadding="5">
+
+    <tbody>
+	<tr>
+      <td>
+        <b padding: 10px;>I'm a Co-founder of Opus foundation. Before that, I was a research assistant in New York University Abu Dhabi, advised by Professor Yi Fang. I am broadly interested in 3D Computer Vision, Pattern Recognition and Deep Learning.</b>
+			</td>
+			</tr>
+</tbody></table>
+
+
+<h2>Research Project:</h2>
+<a href="https://drive.google.com/file/d/1cN9jiE_7cw6EMyBH_xZS5D27RqDIddTu/view?usp=sharing" id="aa" ><center>SateNet: Pixel-Level Segmentation of Satellite Images</a>
+<h3 align="left">1 Description</h3>
+<p style="text-align:justify; text-justify:inter-ideograph;">
+	Recent work in semantic segmentation has shown the effectiveness of context encoding in allowing neural networks to model spatial context for better performance. We set out
+to apply this development to the field of remote sensing. Our focus is to develop a new approach for semantic segmentation of Very High Resolution (VHR) images. This class of aerial images is often difficult to attain high quality semantic labels for, given the distinct challenges that come with images that have been remotely sensed via satellite or other aerial mechanisms. We make use of a lightweight architecture of convolutional neural networks, combined with con-
+text encoding to attain strong performance on the Vaihingen
+2D semantic labeling competition. Our approach attains a
+competitive overall accuracy, as well as a strong classwise
+performance.
+</p>
+<img src="./figures/Munachiso1.png" width="800"/>
+<p>Figure 1: The pipeline of the proposed method.</p>
+<h3 align="left">2 Method</h3>
+<p style="text-align:justify; text-justify:inter-ideograph;">
+	In this
+project, we develop SateNet which make use of a lightweight architecture of convolutional neural networks, combined with context encoding to attain strong performance on the Vaihingen 2D semantic labeling competition. SegNet is computationally inexpensive. It has just 5 convolutional blocks in its encoder and decoder respectively. The encoder of SegNet consists of the first 13 convolutional layers from VGG16 network. We make use of a modified context encoding module,
+originally introduced by Context encoding for semantic segmentation. Our version of the context
+encoding module makes use of skip connection. Initially we had a problem fitting the model, with the additional context encoder on GPU. We decided to modify the aggregation of learnable codewords to ignore the weighting
+of code residuals. However, we realised that this amounts
+to collect information from previous layers of the network
+into the context encoding module and essentially teaching
+the model not to make use of this learned information. In practise, this was affecting the accuracy of the model, limiting the testing accuracy on the Vaihingen dataset to approximately 84%. As displayed in Figure.1, The output of the SegNet architecture is passed to the modified context encoding module, from which the semantic segmentation output is given.
+</p>
+<img src="./figures/Munachiso2.png" width="800"/>
+<p>Table 1: The results on the Vaihingen dataset.</p>
+<h3 align="left">3 Results</h3>
+<p style="text-align:justify; text-justify:inter-ideograph;">
+	In this section, we conduct experiments to demonstrate the effectiveness of the proposed SateNet. We
+used the Vaihingen Dataset which consists of 33 image patches
+cropped from a true orthophoto(TOP) mosaic. The labeling for the images is provided at the pixel level
+in the form of an image, wherein each pixel is in the color corresponding to its label. Each image has its own labeling image, called its ground truth. There are seven categories of roads, buildings, low vegetation, trees, cars, clutter, and Undefined categories, respectively represented by
+the colors white, blue, cyan, green, yellow, red and black.
+In evaluation, we only pay mind to the F1 scores for first
+five categories. There is also a version of the image labels,
+referred to as eroded grond truth, in which the boundaries
+of objects are eroded by a circular disc of 3-pixel radius.
+Those eroded areas are then ignored during evaluation. The motivation is to reduce the impact of uncertain border definitions on the evaluation. We evaluated the model using F1score, classwise F1
+score, and Overall Accuracy. Our model compares well with other models, as can be seen from Table.1. As shown, at the time of writing this
+paper, the state of the art is NLPR3, which had an overall
+accuracy of 91.2. While their results have been relesed on
+the ISPRS website, we cannot cite them as they are yet to
+release their complimentary paper detailing their method.
+As shown in Figure.2, image showing the ground truth, compared to what our model predicts, versus what can be achieved with regular SegNet
+architecture. That particular image is patch 15 from the dataset.
+</p>
+<img src="./figures/Munachiso3.png" width="800"/>
+<p>Figure 2: Selected images with ground truth and our model predicts.</p>
+</div>
+<!-- <ul style="list-style: none;"><li> -->
+<script type="text/javascript" src="./Andrew Owens_files/footer.js"></script>
+
+
+
+
+</a></div></body>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-59284902-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</html>

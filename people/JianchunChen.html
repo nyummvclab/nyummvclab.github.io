@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title><center>Jianchun Chen</center></title>
+<style>
+	img.rounded-img {
+		border: 1px solid #eeeeee;
+		border-radius: 10px ;
+		-moz-border-radius: 10px ;
+		-webkit-border-radius: 10px ;
+	}
+	#aa {
+    font-size : 30px;
+		color:black;
+  }
+	#bb {
+    font-size : 15px;
+		color:black;
+  }
+	.div1{
+
+        margin:0 auto;
+
+        width:1000px;
+
+    }
+</style></head>
+
+
+
+
+<body>
+<div class="div1">
+	<table border="0" cellspacing="20">
+		<tbody><tr>
+			<td><img class="rounded-img" src="./figures/JianchunChen_Fig.jpg" style="height:250px"></td>
+			<td width="30"></td>
+			<td valign="top">
+				<br><br><br><br>
+				<font size="8">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Jianchun Chen</font>
+			</td>
+		</tr></tbody></table>
+
+
+		<h2>Personal Information:</h2>
+	  <table cellpadding="5">
+
+	    <tbody>
+		<tr>
+	      <td><b>Status:</b></td>
+				<td><b>Undergraduate Student</b></td>
+	   </tr>
+		 <tr>
+ 	      <td><b>Program:</b></td>
+ 				<td><b>Computer Science</b></td>
+ 	   </tr>
+		 <tr>
+ 	      <td><b>School:</b></td>
+ 				<td><b>Xiamen University</b></td>
+ 	   </tr>
+		 <tr>
+ 	      <td><b>RA Period:</b></td>
+ 				<td><b>From 2018-06 to 2019-06</b></td>
+ 	   </tr>
+	</tbody></table>
+
+<h2>Biography:</h2>
+
+  <table cellpadding="5">
+
+    <tbody>
+	<tr>
+      <td>
+        <b padding: 10px;>I'm a Master student in Computer Science at Carnegie Mellon University. Before that, I was a research assistant in NYU Multimedia and Visual Computing Lab, advised by Professor Yi Fang. I am broadly interested in 3D Computer Vision, Pattern Recognition and Deep Learning.   </b>
+			</td>
+			</tr>
+</tbody></table>
+
+
+<h2>Research Project:</h2>
+<a href="http://papers.nips.cc/paper/8602-arbicon-net-arbitrary-continuous-geometric-transformation-networks-for-image-registration.pdf" id="aa" ><center>Arbitrary Continuous Geometric Transformation Networks for Image Registration</a>
+<h3 align="left">1 Description</h3>
+<p style="text-align:justify; text-justify:inter-ideograph;">
+	This project concerns the undetermined problem of estimating geometric transformation between image pairs. Recent methods introduce deep neural networks
+to predict the controlling parameters of hand-crafted geometric transformation
+models (e.g. thin-plate spline) for image registration and matching. However the
+low-dimension parametric models are incapable of estimating a highly complex
+geometric transform with limited flexibility to model the actual geometric deformation from image pairs. To address this issue, we present an end-to-end trainable
+deep neural networks, named Arbitrary Continuous Geometric Transformation
+Networks (Arbicon-Net), to directly predict the dense displacement field for pairwise image alignment. Arbicon-Net is generalized from training data to predict the
+desired arbitrary continuous geometric transformation in a data-driven manner for
+unseen new pair of images. Particularly, without imposing penalization terms, the
+predicted displacement vector function is proven to be spatially continuous and
+smooth. To verify the performance of Arbicon-Net, we conducted semantic alignment tests over both synthetic and real image dataset with various experimental
+settings. The results demonstrate that Arbicon-Net outperforms the previous image
+alignment techniques in identifying the image correspondences.
+</p>
+<img src="./figures/JianchunChen1.png" width="800"/>
+<p>Figure 1: Main Pipeline.</p>
+<h3 align="left">2 Method</h3>
+<p style="text-align:justify; text-justify:inter-ideograph;">
+	In this
+project, we design a novel Arbicon-Net,
+which uses deep neural networks to predict dense displacement field to accommodate the arbitrary
+geometric transformations according to the actual requirement for image registration. This addresses
+the critical issue that the actual desired geometric transformation does not match with the one that can
+be provided by pre-defined geometric model. As displayed in Figure.1, Our proposed end-to-end trainable Arbicon-Net has three main components. 1) Geometric Feature Extractor Module; 2) Transformation Descriptor Encoder Module; 3)
+Displacement Field Predictor Module.
+</p>
+<img src="./figures/JianchunChen2.png" width="300"/>
+<p>Table 1: Quantitative results on PFPascal dataset with weakly supervise training.</p>
+<h3 align="left">3 Results</h3>
+<p style="text-align:justify; text-justify:inter-ideograph;">
+	In this section, we carried out a set of tests under different experimental settings to validate the
+performance of our proposed Arbicon-Net for its capability of estimating the geometric transformation
+for image dense correspondence in semantic alignment. In our experiment, three image datasets, Pascal VOC dataset, PF-Pascal dataset and
+Proposal Flow dataset are used to prepare both synthesized and real image dataset for the various
+tests. Pascal VOC dataset contains 28,952 images. PF-Pascal contains 1351 semantically aligned
+image pairs from 20 semantic category of Pascal VOC dataset with a 7:3:3 training/validation/testing
+split. Proposal Flow dataset with 900 image pairs from 5 categories. We randomly split the
+Proposal Flow dataset into 3 folds for k-fold validation in the test. Table 1 compares PCK scores for Arbicon-Net and baseline models for the test
+result on PF-Pascal dataset. The comparison result indicates that Arbicon-Net outperforms all baseline
+methods. To better illustrate the comparison results, we further show two pair images before and
+after image registration in Figure.2. The first two columns show the source and target images, the third
+column illustrates the transformed source image by Arbicon-Net and the fourth column illustrates the
+transformed source image by WeakAlign-4D. As we can see from the Figure, compared to baseline method WeakAlign-4D, Arbicon-Net is able to predict a fine-grained geometric transformation with
+coherent flow motion and preservation of local geometric structural details. </p>
+<img src="./figures/JianchunChen3.png" width="600"/>
+<p>Figure 2: Qualitative results on PF-Pascal dataset with
+weakly supervise training.</p>
+</div>
+<!-- <ul style="list-style: none;"><li> -->
+<script type="text/javascript" src="./Andrew Owens_files/footer.js"></script>
+
+
+
+
+</a></div></body>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-59284902-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</html>

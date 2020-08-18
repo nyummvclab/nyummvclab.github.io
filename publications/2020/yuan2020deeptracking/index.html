@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>ROSS</title>
-    <meta property="og:title" content="ROSS"/>
+    <title>yuan2020deeptracking</title>
+    <meta property="og:title" content="yuan2020deeptracking"/>
 
     <link rel="stylesheet" type="text/css" href="../../../style.css">
 </head>
@@ -16,9 +16,239 @@
 </center>
 
 
+<!-- Authors -->
+<br>
+<table align=center width=900px>
+    <tr>
+        <td align=center width=100px>
+            <center>
+                <span style="font-size:20px"><a href="#">Shuaihang Yuan</a><sup>1,2,3</sup></span>
+            </center>
+        </td>
+
+        <td align=center width=100px>
+            <center>
+                <span style="font-size:20px"><a href="#">Xiang Li</a><sup>1,2,3</sup></span>
+            </center>
+        </td>
+        <td align=center width=100px>
+            <center>
+                <span style="font-size:20px"><a href="#">Yi Fang</a><sup>1,2,3</sup></span>
+            </center>
+        </td>
+    </tr>
+</table>
+
+<!-- Organizations -->
+<br>
+<table align=center width=900px>
+    <tr>
+        <td align=center width=100px>
+            <center>
+                <span style="font-size:20px"><sup>1</sup><a href="http://mmvc.engineering.nyu.edu/">NYU Multimedia and Visual Computing Lab, USA</a> </span>
+            </center>
+        </td>
+        <td align=center width=100px>
+            <center>
+                <span style="font-size:20px"><sup>2</sup>New York University, USA </span>
+            </center>
+        </td>
+        <td align=center width=100px>
+            <center>
+                <span style="font-size:20px"><sup>3</sup>New York University Abu Dhabi, UAE</span>
+            </center>
+        </td>
+
+<!--        <td align=center width=100px>-->
+<!--            <center>-->
+<!--                <span style="font-size:20px"><sup>2</sup>#</span>-->
+<!--            </center>-->
+<!--        </td>-->
+<!--        <td align=center width=100px>-->
+<!--            <center>-->
+<!--                <span style="font-size:20px"><sup>3</sup>#</span>-->
+<!--            </center>-->
+<!--        </td>-->
+<!--        <td align=center width=100px>-->
+<!--            <center>-->
+<!--                <span style="font-size:20px"><sup>4</sup>#</span>-->
+<!--            </center>-->
+<!--        </td>-->
+    </tr>
+</table>
 
 
+<!-- Teaser figure -->
+<br>
+<table align=center width="1024px">
+    <tr>
+        <td width="900px">
+            <center>
+                <img src="./resources/main.png" width="1024px"></img>
+            </center>
+        </td>
+    </tr>
+</table>
 
+
+<!-- Abstract -->
+<table align=center width=900px></table>
+<tr></tr>
+<tr>
+    <td width=600px>
+        <br>
+        <p align="justify" style="font-size: 18px">
+            This paper deals with the problem of 3D tracking, i.e., to
+nd dense correspondences in a sequence of time-varying 3D shapes. De-
+spite deep learning approaches have achieved promising performance for
+pairwise dense 3D shapes matching, it is a great challenge to generalize
+those approaches for the tracking of 3D time-varying geometries. In this
+paper, we aim at handling the problem of 3D tracking, which provides the
+tracking of the consecutive frames of 3D shapes. We propose a novel un-
+supervised 3D shape registration framework named DeepTracking-Net,
+which uses the deep neural networks (DNNs) as auxiliary functions to
+produce spatially and temporally continuous displacement elds for 3D
+tracking of objects in a temporal order. Our key novelty is that we present
+a novel temporal-aware correspondence descriptor (TCD) that captures
+spatio-temporal essence from consecutive 3D point cloud frames. Speci-
+cally, our DeepTracking-Net starts with optimizing a randomly initialized
+latent TCD. The TCD is then decoded to regress a continuous 
+ow (i.e. a
+displacement vector eld) which assigns a motion vector to every point of
+time-varying 3D shapes. Our DeepTracking-Net jointly optimizes TCDs
+and DNNs' weights towards the minimization of an unsupervised align-
+ment loss. Experiments on both simulated and real data sets demonstrate
+that our unsupervised DeepTracking-Net outperforms the current super-
+vised state-of-the-art method. In addition, we prepare a new synthetic
+3D data, named SynMotions, to the 3D tracking and recognition com-
+munity.
+        </p>
+    </td>
+</tr>
+<tr></tr>
+</table>
+
+
+<!-- Paper info -->
+<br>
+<hr>
+<table align=center width=700>
+    <center><h1>Paper</h1></center>
+    <tr>
+        <td>
+            <a href="https://arxiv.org/abs/2006.13848" target="_blank">
+                <img style="height:180px; border: solid; border-radius:30px;" src="./resources/paper.png"/>
+            </a>
+        </td>
+        <td>
+            <span style="font-size:18px">Shuaihang Yuan, Xiang Li, Yi Fang
+                <!-- <br> More authors <br> More authors -->
+                <br><br>
+                DeepTracking-Net: 3D Tracking with Unsupervised Learning of Continuous Flow
+                <br><br>
+                arvix, 2020
+                <br>
+            </span>
+        </td>
+    </tr>
+</table>
+
+
+<!-- Paper links -->
+<br>
+<table align=center width=700px>
+    <tr>
+        <td>
+            <span style="font-size:18px">
+                <center>
+                    <a href="https://arxiv.org/abs/2006.13848">[Paper]</a>
+                </center>
+            </span>
+        </td>
+<!--        <td>-->
+<!--            <span style="font-size:18px">-->
+<!--                <center>-->
+<!--                    <a href="#">[Supplement]</a>-->
+<!--                </center>-->
+<!--            </span>-->
+<!--        </td>-->
+        <td>
+            <span style="font-size:18px">
+                <center>
+                    <a href="./resources/bibtex.bib">[Bibtex]</a>
+                </center>
+            </span>
+        </td>
+    </tr>
+</table>
+
+<!-- Model -->
+<br>
+<hr>
+<center>
+    <h1>Model</h1>
+</center>
+<table align=center width="1024px">
+    <tr>
+        <center>
+            <img class="round" src="./resources/model.png" width="1024px"/>
+        </center>
+    </tr>
+</table>
+
+<!-- Results -->
+<br>
+<hr>
+<center><h1>Results</h1></center>
+<br>
+<table align=center width="1024px">
+    <tr>
+        <td>
+            <center>
+                <img src="./resources/Fig1.png" width="1024px"/><br>
+            </center>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <center>
+                <span style="font-size:18px"></span>
+            </center>
+        </td>
+    </tr>
+
+    <tr>
+        <td >
+            <center>
+                <img src="./resources/Fig2.png" width="1024px"/><br>
+            </center>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <center>
+                <span style="font-size:18px"></span>
+            </center>
+        </td>
+    </tr>
+
+
+    <tr>
+        <td >
+            <center>
+                <img src="./resources/Fig3.png" width="1024px"/><br>
+            </center>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <center>
+                <span style="font-size:18px"></span>
+            </center>
+        </td>
+    </tr>
+
+    
 <!-- Credit -->
 <hr>
 <br>

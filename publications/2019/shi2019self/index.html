@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>ROSS</title>
-    <meta property="og:title" content="ROSS"/>
+    <title>shi2019self</title>
+    <meta property="og:title" content="shi2019self"/>
 
     <link rel="stylesheet" type="text/css" href="../../../style.css">
 </head>
@@ -15,9 +15,236 @@
     <span style="font-size:38px">Self-Supervised Learning of Depth and Ego-motion with Differentiable Bundle Adjustment</span>
 </center>
 
+<!-- Authors -->
+<br>
+<table align=center width=900px>
+    <tr>
+        <td align=center width=100px>
+            <center>
+                <span style="font-size:20px"><a href="#">Yunxiao Shi</a><sup>1,2</sup></span>
+            </center>
+        </td>
+
+        <td align=center width=100px>
+            <center>
+                <span style="font-size:20px"><a href="#">Jing Zhu</a><sup>1,2,3</sup></span>
+            </center>
+        </td>
+        <td align=center width=100px>
+            <center>
+                <span style="font-size:20px"><a href="#">Yi Fang</a><sup>1,2,3</sup></span>
+            </center>
+        </td>
+        <td align=center width=100px>
+            <center>
+                <span style="font-size:20px"><a href="#">Kuochin Lien</a><sup>4</sup></span>
+            </center>
+        </td>
+        <td align=center width=100px>
+            <center>
+                <span style="font-size:20px"><a href="#">Junli Gu</a><sup>4</sup></span>
+            </center>
+        </td>
+    </tr>
+</table>
+
+<!-- Organizations -->
+<br>
+<table align=center width=900px>
+    <tr>
+        <td align=center width=100px>
+            <center>
+                <span style="font-size:20px"><sup>1</sup><a href="http://mmvc.engineering.nyu.edu/">NYU Multimedia and Visual Computing Lab, USA</a> </span>
+            </center>
+        </td>
+        <td align=center width=100px>
+            <center>
+                <span style="font-size:20px"><sup>2</sup>NNew York University, USA </span>
+            </center>
+        </td>
+        <td align=center width=100px>
+            <center>
+                <span style="font-size:20px"><sup>3</sup>New York University Abu Dhabi, UAE</span>
+            </center>
+        </td>
+        <td align=center width=100px>
+            <center>
+                <span style="font-size:20px"><sup>4</sup>XMotors.ai, USA</span>
+            </center>
+        </td>
+<!--        <td align=center width=100px>-->
+<!--            <center>-->
+<!--                <span style="font-size:20px"><sup>2</sup>#</span>-->
+<!--            </center>-->
+<!--        </td>-->
+<!--        <td align=center width=100px>-->
+<!--            <center>-->
+<!--                <span style="font-size:20px"><sup>3</sup>#</span>-->
+<!--            </center>-->
+<!--        </td>-->
+<!--        <td align=center width=100px>-->
+<!--            <center>-->
+<!--                <span style="font-size:20px"><sup>4</sup>#</span>-->
+<!--            </center>-->
+<!--        </td>-->
+    </tr>
+</table>
+
+<!-- Teaser figure -->
+<br>
+<table align=center width="1024px">
+    <tr>
+        <td width="900px">
+            <center>
+                <img src="./resources/main.png" width="1024px"></img>
+            </center>
+        </td>
+    </tr>
+</table>
 
 
+<!-- Abstract -->
+<table align=center width=900px></table>
+<tr></tr>
+<tr>
+    <td width=600px>
+        <br>
+        <p align="justify" style="font-size: 18px">
+            Learning to predict scene depth and camera motion
+from RGB inputs only is a challenging task. Most existing
+learning based methods deal with this task in a supervised
+manner which require ground-truth data that is expensive
+to acquire. More recent approaches explore the possibility
+of estimating scene depth and camera pose in a selfsupervised
+learning framework. Despite encouraging results
+are shown, current methods either learn from monocular
+videos for depth and pose and typically do so without
+enforcing multi-view geometry constraints between scene
+structure and camera motion, or require stereo sequences
+as input where the ground-truth between-frame motion parameters
+need to be known. In this paper we propose to
+jointly optimize the scene depth and camera motion via incorporating
+differentiable Bundle Adjustment (BA) layer by
+minimizing the feature-metric error, and then form the photometric
+consistency loss with view synthesis as the final
+supervisory signal. The proposed approach only needs unlabeled
+monocular videos as input, and extensive experiments
+on the KITTI and Cityscapes dataset show that our
+method achieves state-of-the-art results in self-supervised
+approaches using monocular videos as input, and even
+gains advantage to the line of methods that learns from calibrated
+stereo sequences (i.e. with pose supervision).
+        </p>
+    </td>
+</tr>
+<tr></tr>
+</table>
 
+<!-- Paper info -->
+<br>
+<hr>
+<table align=center width=700>
+    <center><h1>Paper</h1></center>
+    <tr>
+        <td>
+            <a href="https://arxiv.org/abs/1909.13163" target="_blank">
+                <img style="height:180px; border: solid; border-radius:30px;" src="./resources/paper.png"/>
+            </a>
+        </td>
+        <td>
+            <span style="font-size:18px">Yunxiao Shi, Jing Zhu, Yi Fang, Kuochin Lien, Junli Gu
+                <!-- <br> More authors <br> More authors -->
+                <br><br>
+                Self-Supervised Learning of Depth and Ego-motion with Differentiable Bundle Adjustment
+                <br><br>
+                arxiv, 2019
+                <br>
+            </span>
+        </td>
+    </tr>
+</table>
+
+<!-- Paper links -->
+<br>
+<table align=center width=700px>
+    <tr>
+        <td>
+            <span style="font-size:18px">
+                <center>
+                    <a href="https://arxiv.org/abs/1909.13163">[Paper]</a>
+                </center>
+            </span>
+        </td>
+<!--        <td>-->
+<!--            <span style="font-size:18px">-->
+<!--                <center>-->
+<!--                    <a href="#">[Supplement]</a>-->
+<!--                </center>-->
+<!--            </span>-->
+<!--        </td>-->
+        <td>
+            <span style="font-size:18px">
+                <center>
+                    <a href="./resources/bibtex.bib">[Bibtex]</a>
+                </center>
+            </span>
+        </td>
+    </tr>
+</table>
+
+
+<!-- Model -->
+<br>
+<hr>
+<center>
+    <h1>Model</h1>
+</center>
+<table align=center width="1024px">
+    <tr>
+        <center>
+            <img class="round" src="./resources/model.png" width="1024px"/>
+        </center>
+    </tr>
+</table>
+
+<!-- Results -->
+<br>
+<hr>
+<center><h1>Results</h1></center>
+<br>
+<table align=center width="1024px">
+    <tr>
+        <td>
+            <center>
+                <img src="./resources/Fig1.png" width="1024px"/><br>
+            </center>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <center>
+                <span style="font-size:18px"></span>
+            </center>
+        </td>
+    </tr>
+
+    <tr>
+        <td >
+            <center>
+                <img src="./resources/Fig2.png" width="1024px"/><br>
+            </center>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <center>
+                <span style="font-size:18px"></span>
+            </center>
+        </td>
+    </tr>
+
+
+</table>
 
 <!-- Credit -->
 <hr>

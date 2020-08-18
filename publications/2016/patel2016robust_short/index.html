@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>ROSS</title>
-    <meta property="og:title" content="ROSS"/>
+    <title>Object Detection and Recognition</title>
+    <meta property="og:title" content="Object Detection and Recognition"/>
 
     <link rel="stylesheet" type="text/css" href="../../../style.css">
 </head>
@@ -12,11 +12,308 @@
 <!-- Title -->
 <br>
 <center>
-    <span style="font-size:38px">Robust Object Detection and Recognition for the Visually Impaired
+    <span style="font-size:38px">Robust Object Detection and Recognition for the Visually Impaired</span>
+</center>
 
 
 
 
+
+<!-- Authors -->
+<br>
+<table align=center width=900px>
+    <tr>
+        <td align=center width=100px>
+            <center>
+                <span style="font-size:20px"><a href="#">Naman Patel</a><sup>3</sup></span>
+            </center>
+        </td>
+        <td align=center width=100px>
+            <center>
+                <span style="font-size:20px"><a href="#">Yubo Pan</a><sup>1,3</sup></span>
+            </center>
+        </td>
+        <td align=center width=100px>
+            <center>
+                <span style="font-size:20px"><a href="#">Farshad Khorrami</a><sup>1,3</sup></span>
+            </center>
+        </td>
+        <td align=center width=100px>
+            <center>
+                <span style="font-size:20px"><a href="#">John-Ross Rizzo</a><sup>3</sup></span>
+            </center>
+        </td>
+        <td align=center width=100px>
+            <center>
+                <span style="font-size:20px"><a href="#">Todd Hudson</a><sup>3</sup></span>
+            </center>
+        </td>
+        <td align=center width=100px>
+            <center>
+                <span style="font-size:20px"><a href="#">Edward K. Wong</a><sup>1,3</sup></span>
+            </center>
+        </td>
+        <td align=center width=100px>
+            <center>
+                <span style="font-size:20px"><a href="#">Yi Fang</a><sup>1,2,3</sup></span>
+            </center>
+        </td>
+    </tr>
+</table>
+
+<!-- Authors (cont.) -->
+<!--<br>-->
+<!--<table align=center width=900px>-->
+<!--    <tr>-->
+<!--        <td align=center width=100px>-->
+<!--            <center>-->
+<!--                <span style="font-size:20px"><a href="#">#</a><sup>1</sup></span>-->
+<!--            </center>-->
+<!--        </td>-->
+<!--        <td align=center width=100px>-->
+<!--            <center>-->
+<!--                <span style="font-size:20px"><a href="#">#</a><sup>1</sup></span>-->
+<!--            </center>-->
+<!--        </td>-->
+<!--        <td align=center width=100px>-->
+<!--            <center>-->
+<!--                <span style="font-size:20px"><a href="#">#</a><sup>1</sup></span>-->
+<!--            </center>-->
+<!--        </td>-->
+<!--        <td align=center width=100px>-->
+<!--            <center>-->
+<!--                <span style="font-size:20px"><a href="#">Sanja Fidler</a><sup>1</sup></span>-->
+<!--            </center>-->
+<!--        </td>-->
+<!--    </tr>-->
+<!--</table>-->
+
+<!-- Organizations -->
+<br>
+<table align=center width=900px>
+    <tr>
+        <td align=center width=100px>
+            <center>
+                <span style="font-size:20px"><sup>1</sup><a href="http://mmvc.engineering.nyu.edu/">NYU Multimedia and Visual Computing Lab</a> </span>
+            </center>
+        </td>
+        <td align=center width=100px>
+            <center>
+                <span style="font-size:20px"><sup>2</sup>New York University Abu Dhabi </span>
+            </center>
+        </td>
+        <td align=center width=100px>
+            <center>
+                <span style="font-size:20px"><sup>3</sup>New York University</span>
+            </center>
+        </td>
+<!--        <td align=center width=100px>-->
+<!--            <center>-->
+<!--                <span style="font-size:20px"><sup>4</sup>#</span>-->
+<!--            </center>-->
+<!--        </td>-->
+    </tr>
+</table>
+
+<!-- Venus -->
+<!--<table align=center width=700px>-->
+<!--    <tr>-->
+<!--        <td align=center width=100px>-->
+<!--            <center>-->
+<!--                <span style="font-size:20px;color:#ff0000">#<b>(Oral)</b></span>-->
+<!--            </center>-->
+<!--        </td>-->
+<!--    </tr>-->
+<!--</table>-->
+
+<!-- Teaser figure -->
+<br>
+<table align=center width="1024px">
+    <tr>
+        <td width="900px">
+            <center>
+                <img src="./resources/intro.png" width="1024px">
+            </center>
+        </td>
+    </tr>
+</table>
+
+<!-- Abstract -->
+<table align=center width=900px></table>
+<tr></tr>
+<tr>
+    <td width=600px>
+        <br>
+        <p align="justify" style="font-size: 18px">
+An Electronic Travel Aid (ETA) capable of providing
+real-time situational awareness is developed as a potential tool
+for the visually impaired. A robust ETA may enable those
+with visual impairment the ability to navigate more safely in
+three-dimensional space. A unified deep neural network-based
+approach is proposed for detecting and localizing objects in
+the scene-views of a stereoscopic camera system deployed in
+the ETA, subserving the goal of spatial comprehension for the
+immediate environment of the visually impaired end-user. Object
+detections by the deep neural networks are concurrently combined with their corresponding depths to localize the potential
+hazards in three-dimensions. The network architecture for object
+recognition is learned end-to-end by optimizing a multi-task loss
+comprised of four object proposal sub-networks at multiple scales
+and an object detection network; the depth is evaluated from
+the disparity map obtained from the stereoscopic cameras. Our
+device is capable of detecting multiple obstacles in real time
+in the vicinity of an end-user by modality augmentation in the
+RGB and depth domains. This ETA has significant potential in
+its application to those afflicted with sight loss, supplementing
+existing tools it its core functionality or enhancing meta-modal
+sensor fusion approaches.
+        </p>
+    </td>
+</tr>
+<tr></tr>
+</table>
+
+<!-- News -->
+<br>
+<hr>
+<table align=center width=700>
+    <center><h1>News</h1></center>
+    <tr>
+        <ul>
+            <li>[2016] <font color='red'>Proceedings of the 1st International Workshop on Deep Learning for Pattern Recognition</font></li>
+<!--             <li>[June 2020] Project page is up.</a></li>-->
+        </ul>
+    </tr>
+</table>
+
+<!-- Video -->
+<!--<br>-->
+<!--<hr>-->
+<!--<table align=center width=800>-->
+<!--    <center><h1>Videos</h1></center>-->
+<!--    <tr>-->
+<!--        <td>-->
+<!--            <center>-->
+<!--                <span style="font-size:28px">Full Demo Video</span>-->
+<!--            </center>-->
+<!--        </td>-->
+<!--    </tr>-->
+
+<!--    <tr>-->
+<!--        <td width=100px>-->
+<!--            <center>-->
+<!--                <video width="800" controls muted>-->
+<!--                    <source src="#" type="video/mp4">   &lt;!&ndash; put video in resource folder &ndash;&gt;-->
+<!--                </video>-->
+<!--            </center>-->
+<!--        </td>-->
+<!--    </tr>-->
+<!--</table>-->
+
+<!-- Paper info -->
+<br>
+<hr>
+<table align=center width=700>
+    <center><h1>Paper</h1></center>
+    <tr>
+        <td>
+            <a href="http://ddl.escience.cn/f/Efv1" target="_blank">
+                <img style="height:180px; border: solid; border-radius:30px;" src="./resources/firstpage.png"/>
+            </a>
+        </td>
+        <td>
+            <span style="font-size:18px">Naman Patel, Yubo Pan, Yuanda Li, Farshad Khorrami,
+John-Ross Rizzo, Todd Hudson, Edward K. Wong, Yi Fang
+                <!-- <br> More authors <br> More authors -->
+                <br><br>
+                Robust Object Detection and Recognition for the Visually Impaired
+                <br><br>
+                Proceedings of the 1st International Workshop on Deep Learning for Pattern Recognition, 2015
+                <br>
+            </span>
+        </td>
+    </tr>
+</table>
+
+<!-- Paper links -->
+<br>
+<table align=center width=700px>
+    <tr>
+        <td>
+            <span style="font-size:18px">
+                <center>
+                    <a href="http://ddl.escience.cn/f/Efv1">[Paper]</a>
+                </center>
+            </span>
+        </td>
+<!--        <td>-->
+<!--            <span style="font-size:18px">-->
+<!--                <center>-->
+<!--                    <a href="#">[Supplement]</a>-->
+<!--                </center>-->
+<!--            </span>-->
+<!--        </td>-->
+        <td>
+            <span style="font-size:18px">
+                <center>
+                    <a href="./resources/bibtex.bib">[Bibtex]</a>
+                </center>
+            </span>
+        </td>
+    </tr>
+</table>
+
+<! -- Model -->
+<br>
+<hr>
+<center>
+    <h1>Model</h1>
+</center>
+<table align=center width="1024px">
+    <tr>
+        <center>
+            <img class="round" src="./resources/model1.png" width="1024px"/>
+        </center>
+    </tr>
+
+</table>
+
+<!-- Results -->
+<br>
+<hr>
+<center><h1>Results</h1></center>
+<br>
+<table align=center width="1024px">
+    <tr>
+        <td>
+            <center>
+                <img src="./resources/result1.png" width="1024px"/><br>
+            </center>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <center>
+                <span style="font-size:18px"></span>
+            </center>
+        </td>
+    </tr>
+
+    <tr>
+        <td colspan='2'>
+            <center>
+                <img src="./resources/result2.png" width="1024px"/><br>
+            </center>
+        </td>
+    </tr>
+    <tr>
+        <td colspan='2'>
+            <center>
+                <span style="font-size:18px"></span>
+            </center>
+        </td>
+    </tr>
+
+</table>
 
 <!-- Credit -->
 <hr>
@@ -30,4 +327,5 @@
 </table>
 
 </body>
+
 </html>

@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>ROSS</title>
-    <meta property="og:title" content="ROSS"/>
+    <title>zhu2020reference_short</title>
+    <meta property="og:title" content="zhu2020reference_short"/>
 
     <link rel="stylesheet" type="text/css" href="../../../style.css">
 </head>
@@ -15,8 +15,220 @@
     <span style="font-size:38px">Reference Grid-assisted Network for 3D Point Signature Learning from Point Clouds</span>
 </center>
 
+<!-- Authors -->
+<br>
+<table align=center width=900px>
+    <tr>
+        <td align=center width=100px>
+            <center>
+                <span style="font-size:20px"><a href="#">Jing Zhu</a><sup>1,2,3</sup></span>
+            </center>
+        </td>
+
+        <td align=center width=100px>
+            <center>
+                <span style="font-size:20px"><a href="#">Yi Fang</a><sup>1,2,3</sup></span>
+            </center>
+        </td>
+
+    </tr>
+</table>
+
+<!-- Organizations -->
+<br>
+<table align=center width=900px>
+    <tr>
+        <td align=center width=100px>
+            <center>
+                <span style="font-size:20px"><sup>1</sup><a href="http://mmvc.engineering.nyu.edu/">NYU Multimedia and Visual Computing Lab, USA</a> </span>
+            </center>
+        </td>
+        <td align=center width=100px>
+            <center>
+                <span style="font-size:20px"><sup>2</sup>New York University, USA</span>
+            </center>
+        </td>
+        <td align=center width=100px>
+            <center>
+                <span style="font-size:20px"><sup>3</sup>New York University Abu Dhabi, UAE</span>
+            </center>
+        </td>
+
+    </tr>
+</table>
+
+<!-- Teaser figure -->
+<br>
+<table align=center width="1024px">
+    <tr>
+        <td width="900px">
+            <center>
+                <img src="./resources/main.png" width="1024px"></img>
+            </center>
+        </td>
+    </tr>
+</table>
+
+<!-- Abstract -->
+<table align=center width=900px></table>
+<tr></tr>
+<tr>
+    <td width=600px>
+        <br>
+        <p align="justify" style="font-size: 18px">
+            Learning a robust 3D point signature from point clouds
+            is an interesting but challenging task in the computer vision
+            field due to the irregular and unordered structure character-
+            istics of the point cloud data. In this paper, we propose to
+            learn a 3D point signature by exploring the implicit relation
+            between keypoints and their neighbors (grouped as patches)
+            among the given scene point clouds. We design a uniform
+            reference grid to represent the raw relation between each
+            keypoint and its neighbors from the raw point clouds. In
+            order to learn a 3D point signature gradually from expand-
+            ing perceptive region, we create a novel siamese framework
+            with a multi-layer perceptron (MLP)-based unit feature net-
+            work and a 3D convolutional neural network (CNN)-based
+            grid feature network. Specifically, the unit feature network
+            aims to dig the connections among points fallen into the
+            same unit of the reference grid, while the grid feature net-
+            work is used to discover the grid-wise relations across the
+            whole reference grid with concatenation of the learned unit-
+            wise features. Moreover, we introduce an attention network
+            upon the unit feature network to enhance the discriminative
+            ability of our learned 3D point signature. Our proposed 3D
+            point signature achieves superior performance over other
+            state-of-the-art methods on keypoint matching and geo-
+            metric registration on the real-world scenes datasets, e.g.
+            SUN3D, 7-scenes and the synthetic scan augmented scenes
+            in ICL-NUIM dataset. More importantly, our learned 3D
+            point signature successfully handles the point cloud frag-
+            ment alignment challenges by producing correct transfor-
+            mations with RANSAC algorithm.
+            1. Introduction
+        </p>
+    </td>
+</tr>
+<tr></tr>
+</table>
+
+<!-- News -->
+<br>
+<hr>
+<table align=center width=700>
+    <center><h1>News</h1></center>
+    <tr>
+        <ul>
+            <li>[September  2019] <font color='red'>Publicated at WACV 2019</font></li>
+            <!-- <li>[June 2020] Project page is up.</a></li> -->
+        </ul>
+    </tr>
+</table>
+
+<!-- Paper info -->
+<br>
+<hr>
+<table align=center width=700>
+    <center><h1>Paper</h1></center>
+    <tr>
+        <td>
+            <a href="https://ieeexplore.ieee.org/document/9093270" target="_blank">
+                <img style="height:180px; border: solid; border-radius:30px;" src="./resources/paper.png"/>
+            </a>
+        </td>
+        <td>
+            <span style="font-size:18px">Jing Zhu, Yi Fang
+                <!-- <br> More authors <br> More authors -->
+                <br><br>
+                Reference Grid-assisted Network for 3D Point Signature Learning from Point Clouds
+                <br><br>
+                 WACV, 2020
+                <br>
+            </span>
+        </td>
+    </tr>
+</table>
+
+<!-- Paper links -->
+<br>
+<table align=center width=700px>
+    <tr>
+        <td>
+            <span style="font-size:18px">
+                <center>
+                    <a href="https://ieeexplore.ieee.org/document/9093270">[Paper]</a>
+                </center>
+            </span>
+        </td>
+<!--        <td>-->
+<!--            <span style="font-size:18px">-->
+<!--                <center>-->
+<!--                    <a href="#">[Supplement]</a>-->
+<!--                </center>-->
+<!--            </span>-->
+<!--        </td>-->
+        <td>
+            <span style="font-size:18px">
+                <center>
+                    <a href="./resources/bibtex.bib">[Bibtex]</a>
+                </center>
+            </span>
+        </td>
+    </tr>
+</table>
+
+<! -- Model -->
+<br>
+<hr>
+<center>
+    <h1>Model</h1>
+</center>
+<table align=center width="1024px">
+    <tr>
+        <center>
+            <img class="round" src="./resources/model.png" width="1024px"/>
+        </center>
+    </tr>
+</table>
+
+<!-- Results -->
+<br>
+<hr>
+<center><h1>Results</h1></center>
+<br>
+<table align=center width="1024px">
+    <tr>
+        <td>
+            <center>
+                <img src="./resources/Fig1.png" width="1024px"/><br>
+            </center>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <center>
+                <span style="font-size:18px"></span>
+            </center>
+        </td>
+    </tr>
+
+    <tr>
+        <td colspan='2'>
+            <center>
+                <img src="./resources/Fig2.png" width="1024px"/><br>
+            </center>
+        </td>
+    </tr>
+    <tr>
+        <td colspan='2'>
+            <center>
+                <span style="font-size:18px"></span>
+            </center>
+        </td>
+    </tr>
 
 
+</table>
 
 
 <!-- Credit -->

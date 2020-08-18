@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>ROSS</title>
-    <meta property="og:title" content="ROSS"/>
+    <title>zhu2018learning_short</title>
+    <meta property="og:title" content="zhu2018learning_short"/>
 
     <link rel="stylesheet" type="text/css" href="../../../style.css">
 </head>
@@ -15,9 +15,324 @@
     <span style="font-size:38px">Learning to synthesize 3d indoor scenes from monocular images</span>
 </center>
 
+<!-- Authors -->
+<br>
+<table align=center width=900px>
+    <tr>
+        <td align=center width=100px>
+            <center>
+                <span style="font-size:20px"><a href="#">Fan Zhu</a><sup>1,2</sup></span>
+            </center>
+        </td>
+        <td align=center width=100px>
+            <center>
+                <span style="font-size:20px"><a href="#">Li Liu</a><sup>1,2</sup></span>
+            </center>
+        </td>
+				<td align=center width=100px>
+            <center>
+                <span style="font-size:20px"><a href="#">Jin Xie</a><sup>1,2</sup></span>
+            </center>
+        </td>
+				<td align=center width=100px>
+            <center>
+                <span style="font-size:20px"><a href="#">Fumin Shen</a><sup>4</sup></span>
+            </center>
+        </td>
+				<td align=center width=100px>
+            <center>
+                <span style="font-size:20px"><a href="#">Ling Shao</a><sup>1,2</sup></span>
+            </center>
+        </td>
+				<td align=center width=100px>
+            <center>
+                <span style="font-size:20px"><a href="#">Yi Fang</a><sup>1,2,3</sup></span>
+            </center>
+        </td>
+    </tr>
+</table>
+
+<!-- Authors (cont.) -->
+<!--<br>-->
+<!--<table align=center width=900px>-->
+<!--    <tr>-->
+<!--        <td align=center width=100px>-->
+<!--            <center>-->
+<!--                <span style="font-size:20px"><a href="#">#</a><sup>1</sup></span>-->
+<!--            </center>-->
+<!--        </td>-->
+<!--        <td align=center width=100px>-->
+<!--            <center>-->
+<!--                <span style="font-size:20px"><a href="#">#</a><sup>1</sup></span>-->
+<!--            </center>-->
+<!--        </td>-->
+<!--        <td align=center width=100px>-->
+<!--            <center>-->
+<!--                <span style="font-size:20px"><a href="#">#</a><sup>1</sup></span>-->
+<!--            </center>-->
+<!--        </td>-->
+<!--        <td align=center width=100px>-->
+<!--            <center>-->
+<!--                <span style="font-size:20px"><a href="#">Sanja Fidler</a><sup>1</sup></span>-->
+<!--            </center>-->
+<!--        </td>-->
+<!--    </tr>-->
+<!--</table>-->
+
+<!-- Organizations -->
+<br>
+<table align=center width=900px>
+    <tr>
+        <td align=center width=100px>
+            <center>
+                <span style="font-size:20px"><sup>1</sup><a href="http://mmvc.engineering.nyu.edu/">NYU Multimedia and Visual Computing Lab</a> </span>
+            </center>
+        </td>
+        <td align=center width=100px>
+            <center>
+                <span style="font-size:20px"><sup>2</sup>New York University Abu Dhabi </span>
+            </center>
+        </td>
+        <td align=center width=100px>
+            <center>
+                <span style="font-size:20px"><sup>3</sup>New York University Tandon School of Engineering</span>
+            </center>
+        </td>
+				<td align=center width=100px>
+            <center>
+                <span style="font-size:20px"><sup>3</sup>University of Electronic Science and Technology of China Chengdu</span>
+            </center>
+        </td>
+<!--        <td align=center width=100px>-->
+<!--            <center>-->
+<!--                <span style="font-size:20px"><sup>2</sup>University of East Anglia</span>-->
+<!--            </center>-->
+<!--        </td>-->
+<!--        <td align=center width=100px>-->
+<!--            <center>-->
+<!--                <span style="font-size:20px"><sup>3</sup>#</span>-->
+<!--            </center>-->
+<!--        </td>-->
+<!--        <td align=center width=100px>-->
+<!--            <center>-->
+<!--                <span style="font-size:20px"><sup>4</sup>#</span>-->
+<!--            </center>-->
+<!--        </td>-->
+    </tr>
+</table>
+
+<!-- Venus -->
+<!--<table align=center width=700px>-->
+<!--    <tr>-->
+<!--        <td align=center width=100px>-->
+<!--            <center>-->
+<!--                <span style="font-size:20px;color:#ff0000">#<b>(Oral)</b></span>-->
+<!--            </center>-->
+<!--        </td>-->
+<!--    </tr>-->
+<!--</table>-->
+
+<!-- Teaser figure -->
+<br>
+<table align=center width="800px">
+    <tr>
+        <td width="900px">
+            <center>
+                <img src="./resources/teaser.png" width="800px">
+            </center>
+        </td>
+    </tr>
+</table>
+
+<!-- Abstract -->
+<table align=center width=900px></table>
+<tr></tr>
+<tr>
+    <td width=600px>
+        <br>
+        <p align="justify" style="font-size: 18px">
+					Depth images have always been playing critical roles for indoor
+scene understanding problems, and are particularly important for
+tasks in which 3D inferences are involved. However, since depth
+images are not universally available, abandoning them from the
+testing stage can significantly improve the generality of a method.
+In this work, we consider the scenarios where depth images are not
+available in the testing data, and propose to learn a convolutional
+long short-term memory (Conv LSTM) network and a regression
+convolutional neural network (regression ConvNet) using only
+monocular RGB images. The proposed networks benefit from 2D
+segmentations, object-level spatial context, object-scene dependencies and objects’ geometric information, where optimization
+is governed by the semantic label loss, which measures the label
+consistencies of both objects and scenes, and the 3D geometrical
+loss, which measures the correctness of objects’ 6Dof estimation.
+Conv LSTM and regression ConvNet are applied to scene/object
+classification, object detection and 6Dof estimation tasks respectively, where we utilize the joint inference from both networks
+and further provide the perspective of synthesizing fully rigged 3D
+scenes according to objects’ arrangements in monocular images.
+Both quantitative and qualitative experimental results are provided
+on the NYU-v2 dataset, and we demonstrate that the proposed Conv
+LSTM can achieve state-of-the-art performance without requiring
+the depth information.
 
 
 
+        </p>
+    </td>
+</tr>
+<tr></tr>
+</table>
+
+<!-- News -->
+<br>
+<hr>
+<table align=center width=700>
+    <center><h1>News</h1></center>
+    <tr>
+        <ul>
+            <li>[Apr. 2017] <font color='red'>26th ACM International Conference on Multimedia(ACM), 2018</font></li>
+        </ul>
+    </tr>
+</table>
+
+<!-- Publicated at-->
+<!--<br>-->
+<!--<hr>-->
+<!--<table align=center width=800>-->
+<!--    <center><h1>Videos</h1></center>-->
+<!--    <tr>-->
+<!--        <td>-->
+<!--            <center>-->
+<!--                <span style="font-size:28px">Full Demo Video</span>-->
+<!--            </center>-->
+<!--        </td>-->
+<!--    </tr>-->
+
+<!--    <tr>-->
+<!--        <td width=100px>-->
+<!--            <center>-->
+<!--                <video width="800" controls muted>-->
+<!--                    <source src="#" type="video/mp4">   &lt;!&ndash; put video in resource folder &ndash;&gt;-->
+<!--                </video>-->
+<!--            </center>-->
+<!--        </td>-->
+<!--    </tr>-->
+<!--</table>-->
+
+<!-- Paper info -->
+<br>
+<hr>
+<table align=center width=700>
+    <center><h1>Paper</h1></center>
+    <tr>
+        <td>
+            <a href="https://dl.acm.org/doi/pdf/10.1145/3240508.3240700" target="_blank">
+                <img style="height:180px; border: solid; border-radius:30px;" src="./resources/paper.png"/>
+            </a>
+        </td>
+        <td>
+            <span style="font-size:18px">Fan Zhu, Li Liu, Jin Xie, Fumin Shen, Ling Shao, Yi Fang
+							<br><br>
+               {Learning to synthesize 3d indoor scenes from monocular images
+                <br><br>
+                 ACM, 2018
+                <br>
+            </span>
+        </td>
+    </tr>
+</table>
+<!-- Paper links -->
+<br>
+<table align=center width=700px>
+    <tr>
+        <td>
+            <span style="font-size:18px">
+                <center>
+                    <a href="https://dl.acm.org/doi/pdf/10.1145/3240508.3240700">[Paper]</a>
+                </center>
+            </span>
+        </td>
+<!--        <td>-->
+<!--            <span style="font-size:18px">-->
+<!--                <center>-->
+<!--                    <a href="#">[Supplement]</a>-->
+<!--                </center>-->
+<!--            </span>-->
+<!--        </td>-->
+        <td>
+            <span style="font-size:18px">
+                <center>
+                    <a href="./resources/bibtex.bib">[Bibtex]</a>
+                </center>
+            </span>
+        </td>
+    </tr>
+</table>
+
+<! -- Model -->
+<br>
+<hr>
+<center>
+    <h1>Model</h1>
+</center>
+<table align=center width="1024px">
+    <tr>
+        <center>
+            <img class="round" src="./resources/model.png" width="700px"/>
+        </center>
+    </tr>
+</table>
+
+<!-- Results -->
+<br>
+<hr>
+<center><h1>Results</h1></center>
+<br>
+<table align=center width="1024px">
+    <tr>
+        <td>
+            <center>
+                <img src="./resources/result1.png" width="500px"/><br>
+            </center>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <center>
+                <span style="font-size:18px"></span>
+            </center>
+        </td>
+    </tr>
+
+    <tr>
+        <td colspan='2'>
+            <center>
+                <img src="./resources/result2.png" width="700px"/><br>
+            </center>
+        </td>
+    </tr>
+    <tr>
+        <td colspan='2'>
+            <center>
+                <span style="font-size:18px"></span>
+            </center>
+        </td>
+    </tr>
+
+    <tr>
+        <td colspan='2'>
+            <center>
+                <img src="./resources/result3.png" width="700px"/><br>
+            </center>
+        </td>
+    </tr>
+    <tr>
+        <td colspan='2'>
+            <center>
+                <span style="font-size:18px"></span>
+            </center>
+        </td>
+    </tr>
+</table>
 
 <!-- Credit -->
 <hr>
@@ -25,7 +340,7 @@
 <table style="font-size:14px" align=center>
     <tr>
         <td>
-            This webpage template was borrowed from <a href='../../2020/MEPS/'>MEPS</a>.
+            This webpage template was borrowed from <a href='../../2020/MEPS'>MEPS</a>.
         </td>
     </tr>
 </table>

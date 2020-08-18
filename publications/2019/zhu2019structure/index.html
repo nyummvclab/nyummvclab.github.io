@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>ROSS</title>
-    <meta property="og:title" content="ROSS"/>
+    <title>zhu2019structure</title>
+    <meta property="og:title" content="zhu2019structure"/>
 
     <link rel="stylesheet" type="text/css" href="../../../style.css">
 </head>
@@ -15,9 +15,324 @@
     <span style="font-size:38px">Structure-Attentioned Memory Network for Monocular Depth Estimation</span>
 </center>
 
+<!-- Authors -->
+<br>
+<table align=center width=900px>
+    <tr>
+        <td align=center width=100px>
+            <center>
+                <span style="font-size:20px"><a href="#">Jing Zhu</a><sup>1,2,3</sup></span>
+            </center>
+        </td>
+        <td align=center width=100px>
+            <center>
+                <span style="font-size:20px"><a href="#">Yunxiao Shi</a><sup>1,2</sup></span>
+            </center>
+        </td>
+				<td align=center width=100px>
+            <center>
+                <span style="font-size:20px"><a href="#">Mengwei Ren</a><sup>1,2</sup></span>
+            </center>
+        </td>
+				<td align=center width=100px>
+            <center>
+                <span style="font-size:20px"><a href="#">Yi Fang</a><sup>1,2,3</sup></span>
+            </center>
+        </td>
+				<td align=center width=100px>
+            <center>
+                <span style="font-size:20px"><a href="#">Kuo-Chin Lien</a><sup>1,2</sup></span>
+            </center>
+        </td>
+				<td align=center width=100px>
+            <center>
+                <span style="font-size:20px"><a href="#">Junli Gu</a><sup>1,2,3</sup></span>
+            </center>
+        </td>
+    </tr>
+</table>
+
+<!-- Authors (cont.) -->
+<!--<br>-->
+<!--<table align=center width=900px>-->
+<!--    <tr>-->
+<!--        <td align=center width=100px>-->
+<!--            <center>-->
+<!--                <span style="font-size:20px"><a href="#">#</a><sup>1</sup></span>-->
+<!--            </center>-->
+<!--        </td>-->
+<!--        <td align=center width=100px>-->
+<!--            <center>-->
+<!--                <span style="font-size:20px"><a href="#">#</a><sup>1</sup></span>-->
+<!--            </center>-->
+<!--        </td>-->
+<!--        <td align=center width=100px>-->
+<!--            <center>-->
+<!--                <span style="font-size:20px"><a href="#">#</a><sup>1</sup></span>-->
+<!--            </center>-->
+<!--        </td>-->
+<!--        <td align=center width=100px>-->
+<!--            <center>-->
+<!--                <span style="font-size:20px"><a href="#">Sanja Fidler</a><sup>1</sup></span>-->
+<!--            </center>-->
+<!--        </td>-->
+<!--    </tr>-->
+<!--</table>-->
+
+<!-- Organizations -->
+<br>
+<table align=center width=900px>
+    <tr>
+        <td align=center width=100px>
+            <center>
+                <span style="font-size:20px"><sup>1</sup><a href="http://mmvc.engineering.nyu.edu/">NYU Multimedia and Visual Computing Lab</a> </span>
+            </center>
+        </td>
+        <td align=center width=100px>
+            <center>
+                <span style="font-size:20px"><sup>2</sup>New York University Abu Dhabi </span>
+            </center>
+        </td>
+        <td align=center width=100px>
+            <center>
+                <span style="font-size:20px"><sup>3</sup>New York University Tandon School of Engineering</span>
+            </center>
+        </td>
+				<td align=center width=100px>
+            <center>
+                <span style="font-size:20px"><sup>3</sup>XMotors.ai</span>
+            </center>
+        </td>
+<!--        <td align=center width=100px>-->
+<!--            <center>-->
+<!--                <span style="font-size:20px"><sup>2</sup>University of East Anglia</span>-->
+<!--            </center>-->
+<!--        </td>-->
+<!--        <td align=center width=100px>-->
+<!--            <center>-->
+<!--                <span style="font-size:20px"><sup>3</sup>#</span>-->
+<!--            </center>-->
+<!--        </td>-->
+<!--        <td align=center width=100px>-->
+<!--            <center>-->
+<!--                <span style="font-size:20px"><sup>4</sup>#</span>-->
+<!--            </center>-->
+<!--        </td>-->
+    </tr>
+</table>
+
+<!-- Venus -->
+<!--<table align=center width=700px>-->
+<!--    <tr>-->
+<!--        <td align=center width=100px>-->
+<!--            <center>-->
+<!--                <span style="font-size:20px;color:#ff0000">#<b>(Oral)</b></span>-->
+<!--            </center>-->
+<!--        </td>-->
+<!--    </tr>-->
+<!--</table>-->
+
+<!-- Teaser figure -->
+<br>
+<table align=center width="800px">
+    <tr>
+        <td width="900px">
+            <center>
+                <img src="./resources/teaser.png" width="800px">
+            </center>
+        </td>
+    </tr>
+</table>
+
+<!-- Abstract -->
+<table align=center width=900px></table>
+<tr></tr>
+<tr>
+    <td width=600px>
+        <br>
+        <p align="justify" style="font-size: 18px">
+					Monocular depth estimation is a challenging task that aims to
+predict a corresponding depth map from a given single RGB
+image. Recent deep learning models have been proposed to
+predict the depth from the image by learning the alignment
+of deep features between the RGB image and the depth domains. In this paper, we present a novel approach, named
+Structure-Attentioned Memory Network, to more effectively
+transfer domain features for monocular depth estimation by
+taking into account the common structure regularities (e.g.,
+repetitive structure patterns, planar surfaces, symmetries) in
+domain adaptation. To this end, we introduce a new StructureOriented Memory (SOM) module to learn and memorize the
+structure-specific information between RGB image domain
+and the depth domain. More specifically, in the SOM module, we develop a Memorable Bank of Filters (MBF) unit
+to learn a set of filters that memorize the structure-aware
+image-depth residual pattern, and also an Attention Guided
+Controller (AGC) unit to control the filter selection in the
+MBF given image features queries. Given the query image
+feature, the trained SOM module is able to adaptively select
+the best customized filters for cross-domain feature transferring with an optimal structural disparity between image and
+depth. In summary, we focus on addressing this structurespecific domain adaption challenge by proposing a novel endto-end multi-scale memorable network for monocular depth
+estimation. The experiments show that our proposed model
+demonstrates the superior performance compared to the existing supervised monocular depth estimation approaches on
+the challenging KITTI and NYU Depth V2 benchmarks.
 
 
 
+        </p>
+    </td>
+</tr>
+<tr></tr>
+</table>
+
+<!-- News -->
+<br>
+<hr>
+<table align=center width=700>
+    <center><h1>News</h1></center>
+    <tr>
+        <ul>
+            <li>[Apr. 2017] <font color='red'>ArXiv preprint, 2019</font></li>
+        </ul>
+    </tr>
+</table>
+
+<!-- Publicated at-->
+<!--<br>-->
+<!--<hr>-->
+<!--<table align=center width=800>-->
+<!--    <center><h1>Videos</h1></center>-->
+<!--    <tr>-->
+<!--        <td>-->
+<!--            <center>-->
+<!--                <span style="font-size:28px">Full Demo Video</span>-->
+<!--            </center>-->
+<!--        </td>-->
+<!--    </tr>-->
+
+<!--    <tr>-->
+<!--        <td width=100px>-->
+<!--            <center>-->
+<!--                <video width="800" controls muted>-->
+<!--                    <source src="#" type="video/mp4">   &lt;!&ndash; put video in resource folder &ndash;&gt;-->
+<!--                </video>-->
+<!--            </center>-->
+<!--        </td>-->
+<!--    </tr>-->
+<!--</table>-->
+
+<!-- Paper info -->
+<br>
+<hr>
+<table align=center width=700>
+    <center><h1>Paper</h1></center>
+    <tr>
+        <td>
+            <a href="https://arxiv.org/abs/1909.04594" target="_blank">
+                <img style="height:180px; border: solid; border-radius:30px;" src="./resources/paper.png"/>
+            </a>
+        </td>
+        <td>
+            <span style="font-size:18px">Jing Zhu, Yunxiao Shi, Mengwei Ren, Yi Fang, Kuo-Chin Lien, Junli Gu
+							<br><br>
+               {Structure-Attentioned Memory Network for Monocular Depth Estimation
+                <br><br>
+                 ArXiv preprint, 2019
+                <br>
+            </span>
+        </td>
+    </tr>
+</table>
+<!-- Paper links -->
+<br>
+<table align=center width=700px>
+    <tr>
+        <td>
+            <span style="font-size:18px">
+                <center>
+                    <a href="https://arxiv.org/abs/1909.04594">[Paper]</a>
+                </center>
+            </span>
+        </td>
+<!--        <td>-->
+<!--            <span style="font-size:18px">-->
+<!--                <center>-->
+<!--                    <a href="#">[Supplement]</a>-->
+<!--                </center>-->
+<!--            </span>-->
+<!--        </td>-->
+        <td>
+            <span style="font-size:18px">
+                <center>
+                    <a href="./resources/bibtex.bib">[Bibtex]</a>
+                </center>
+            </span>
+        </td>
+    </tr>
+</table>
+
+<! -- Model -->
+<br>
+<hr>
+<center>
+    <h1>Model</h1>
+</center>
+<table align=center width="1024px">
+    <tr>
+        <center>
+            <img class="round" src="./resources/model.png" width="700px"/>
+        </center>
+    </tr>
+</table>
+
+<!-- Results -->
+<br>
+<hr>
+<center><h1>Results</h1></center>
+<br>
+<table align=center width="1024px">
+    <tr>
+        <td>
+            <center>
+                <img src="./resources/result1.png" width="800px"/><br>
+            </center>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <center>
+                <span style="font-size:18px"></span>
+            </center>
+        </td>
+    </tr>
+
+    <tr>
+        <td colspan='2'>
+            <center>
+                <img src="./resources/result2.png" width="700px"/><br>
+            </center>
+        </td>
+    </tr>
+    <tr>
+        <td colspan='2'>
+            <center>
+                <span style="font-size:18px"></span>
+            </center>
+        </td>
+    </tr>
+
+    <tr>
+        <td colspan='2'>
+            <center>
+                <img src="./resources/result3.png" width="800px"/><br>
+            </center>
+        </td>
+    </tr>
+    <tr>
+        <td colspan='2'>
+            <center>
+                <span style="font-size:18px"></span>
+            </center>
+        </td>
+    </tr>
+</table>
 
 <!-- Credit -->
 <hr>
@@ -25,7 +340,7 @@
 <table style="font-size:14px" align=center>
     <tr>
         <td>
-            This webpage template was borrowed from <a href='../../2020/MEPS/'>MEPS</a>.
+            This webpage template was borrowed from <a href='../../2020/MEPS'>MEPS</a>.
         </td>
     </tr>
 </table>

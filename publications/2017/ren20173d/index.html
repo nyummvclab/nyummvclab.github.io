@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>patel2017reducing_short</title>
-    <meta property="og:title" content="patel2017reducing_short"/>
+    <title>3D-A-Nets</title>
+    <meta property="og:title" content="3D-A-Nets"/>
 
     <link rel="stylesheet" type="text/css" href="../../../style.css">
 </head>
@@ -12,8 +12,13 @@
 <!-- Title -->
 <br>
 <center>
-    <span style="font-size:38px">Reducing operator workload for indoor navigation of autonomous robots via multimodal sensor fusion</span>
+    <span style="font-size:38px">3D-A-Nets: 3D Deep Dense Descriptor for Volumetric Shapes with Adversarial
+Networks</span>
 </center>
+
+
+
+
 
 <!-- Authors -->
 <br>
@@ -21,22 +26,17 @@
     <tr>
         <td align=center width=100px>
             <center>
-                <span style="font-size:20px"><a href="#">Naman Patel</a><sup>1,2</sup></span>
+                <span style="font-size:20px"><a href="#">Mengwei Ren</a><sup>1,3</sup></span>
             </center>
         </td>
         <td align=center width=100px>
             <center>
-                <span style="font-size:20px"><a href="#">Prashanth Krishnamurthy</a><sup>1,2</sup></span>
+                <span style="font-size:20px"><a href="#">Liang Niu</a><sup>1,3</sup></span>
             </center>
         </td>
-				<td align=center width=100px>
+        <td align=center width=100px>
             <center>
                 <span style="font-size:20px"><a href="#">Yi Fang</a><sup>1,2,3</sup></span>
-            </center>
-        </td>
-				<td align=center width=100px>
-            <center>
-                <span style="font-size:20px"><a href="#">Farshad Khorrami</a><sup>1,2</sup></span>
             </center>
         </td>
     </tr>
@@ -85,19 +85,9 @@
         </td>
         <td align=center width=100px>
             <center>
-                <span style="font-size:20px"><sup>3</sup>New York University Tandon School of Engineering</span>
+                <span style="font-size:20px"><sup>3</sup>New York University</span>
             </center>
         </td>
-<!--        <td align=center width=100px>-->
-<!--            <center>-->
-<!--                <span style="font-size:20px"><sup>2</sup>University of East Anglia</span>-->
-<!--            </center>-->
-<!--        </td>-->
-<!--        <td align=center width=100px>-->
-<!--            <center>-->
-<!--                <span style="font-size:20px"><sup>3</sup>#</span>-->
-<!--            </center>-->
-<!--        </td>-->
 <!--        <td align=center width=100px>-->
 <!--            <center>-->
 <!--                <span style="font-size:20px"><sup>4</sup>#</span>-->
@@ -119,11 +109,11 @@
 
 <!-- Teaser figure -->
 <br>
-<table align=center width="500px">
+<table align=center width="1024px">
     <tr>
         <td width="900px">
             <center>
-                <img src="./resources/teaser.png" width="800px">
+                <img src="./resources/intro.png" width="1024px">
             </center>
         </td>
     </tr>
@@ -136,21 +126,25 @@
     <td width=600px>
         <br>
         <p align="justify" style="font-size: 18px">
-					We present a novel framework for operator assistance in
-indoor navigation and map building wherein the ground
-vehicle learns to navigate by imitating the operator commands while training. Our framework reduces the workload
-on the human operator simplifying the process of human
-robot interaction. An end to end architecture is presented
-which takes inputs from camera and LIDAR and outputs
-the steering angle for the ground vehicle to navigate through
-an indoor environment. The presented framework includes
-static obstacle avoidance during navigation and map building. The architecture is made more reliable by an on-line
-mechanism in which the robot introspects its output and decides whether to rely on its output or transfer vehicle control
-to a human pilot. The end to end trained framework implicitly learns to avoid obstacles. We show that our framework
-works under various cases where other frameworks fail.
-
-
-
+Recently researchers have been shifting their focus towards learned 3D shape descriptors from hand-craft ones
+to better address challenging issues of the deformation and
+structural variation inherently present in 3D objects. 3D
+geometric data are often transformed to 3D Voxel grids with
+regular format in order to be better fed to a deep neural net
+architecture. However, the computational intractability of
+direct application of 3D convolutional nets to 3D volumetric data severely limits the efficiency (i.e. slow processing)
+and effectiveness (i.e. unsatisfied accuracy) in processing
+3D geometric data. In this paper, powered with a novel design of adversarial networks (3D-A-Nets), we have developed a novel 3D deep dense shape descriptor (3D-DDSD)
+to address the challenging issues of efficient and effective
+3D volumetric data processing. We developed new definition of 2D multilayer dense representation (MDR) of 3D
+volumetric data to extract concise but geometrically informative shape description and a novel design of adversarial networks that jointly train a set of convolution neural
+network (CNN), recurrent neural network (RNN) and an
+adversarial discriminator. More specifically, the generator network produces 3D shape features that encourages
+the clustering of samples from the same category with correct class label, whereas the discriminator network discourages
+            the clustering by assigning them misleading adversarial class labels. By addressing the challenges posed by the
+computational inefficiency of direct application of CNN to
+3D volumetric data, 3D-A-Nets can learn high-quality 3D-DSDD which demonstrates superior performance on 3D
+shape classification and retrieval over other state-of-the-art techniques by a great margin.
         </p>
     </td>
 </tr>
@@ -164,12 +158,13 @@ works under various cases where other frameworks fail.
     <center><h1>News</h1></center>
     <tr>
         <ul>
-            <li>[Apr. 2017] <font color='red'>ACM/IEEE International Conference on Human-Robot Interaction, 2017</font></li>
+            <li>[2017] <font color='red'>ArXiv Preprint</font></li>
+<!--             <li>[June 2020] Project page is up.</a></li>-->
         </ul>
     </tr>
 </table>
 
-<!-- Publicated at-->
+<!-- Video -->
 <!--<br>-->
 <!--<hr>-->
 <!--<table align=center width=800>-->
@@ -200,21 +195,23 @@ works under various cases where other frameworks fail.
     <center><h1>Paper</h1></center>
     <tr>
         <td>
-            <a href="https://dl.acm.org/doi/pdf/10.1145/3029798.3038368" target="_blank">
-                <img style="height:180px; border: solid; border-radius:30px;" src="./resources/paper.png"/>
+            <a href="https://arxiv.org/abs/1711.10108" target="_blank">
+                <img style="height:180px; border: solid; border-radius:30px;" src="./resources/firstpage.png"/>
             </a>
         </td>
         <td>
-            <span style="font-size:18px">Naman Patel, Prashanth Krishnamurthy, Yi Fang, Farshad Khorrami
-							<br><br>
-               Reducing operator workload for indoor navigation of autonomous robots via multimodal sensor fusion
+            <span style="font-size:18px">Mengwei Ren, Liang Niu, and Yi Fang
+                <!-- <br> More authors <br> More authors -->
                 <br><br>
-                 ACM, 2017
+                3D-A-Nets: 3D Deep Dense Descriptor for Volumetric Shapes with Adversarial Networks
+                <br><br>
+                ArXiv Preprint, 2017
                 <br>
             </span>
         </td>
     </tr>
 </table>
+
 <!-- Paper links -->
 <br>
 <table align=center width=700px>
@@ -222,7 +219,7 @@ works under various cases where other frameworks fail.
         <td>
             <span style="font-size:18px">
                 <center>
-                    <a href="https://dl.acm.org/doi/pdf/10.1145/3029798.3038368">[Paper]</a>
+                    <a href="https://arxiv.org/abs/1711.10108">[Paper]</a>
                 </center>
             </span>
         </td>
@@ -246,7 +243,17 @@ works under various cases where other frameworks fail.
 <! -- Model -->
 <br>
 <hr>
+<center>
+    <h1>Model</h1>
+</center>
+<table align=center width="1024px">
+    <tr>
+        <center>
+            <img class="round" src="./resources/model1.png" width="1024px"/>
+        </center>
+    </tr>
 
+</table>
 
 <!-- Results -->
 <br>
@@ -257,7 +264,7 @@ works under various cases where other frameworks fail.
     <tr>
         <td>
             <center>
-                <img src="./resources/result1.png" width="400px"/><br>
+                <img src="./resources/result1.png" width="1024px"/><br>
             </center>
         </td>
     </tr>
@@ -272,7 +279,7 @@ works under various cases where other frameworks fail.
     <tr>
         <td colspan='2'>
             <center>
-                <img src="./resources/result2.png" width="400px"/><br>
+                <img src="./resources/result2.png" width="1024px"/><br>
             </center>
         </td>
     </tr>
@@ -292,10 +299,11 @@ works under various cases where other frameworks fail.
 <table style="font-size:14px" align=center>
     <tr>
         <td>
-            This webpage template was borrowed from <a href='../../2020/MEPS'>MEPS</a>.
+            This webpage template was borrowed from <a href='../../2020/MEPS/'>MEPS</a>.
         </td>
     </tr>
 </table>
 
 </body>
+
 </html>
